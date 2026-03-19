@@ -57,6 +57,6 @@ CREATE POLICY "Public delete saved_assets" ON saved_assets
 -- 5. Enable Realtime for saved_assets
 ALTER PUBLICATION supabase_realtime ADD TABLE saved_assets;
 
--- 6. Clean slate: remove Junglück-hardcoded data
+-- 6. Clean slate
 DELETE FROM creatives;
 DELETE FROM brands;
