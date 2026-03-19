@@ -118,6 +118,21 @@ class SupabaseClient:
         """Get the public URL for a storage object."""
         return f"{self.url}/storage/v1/object/public/{bucket}/{path}"
 
+    def get_single_brand_id(self):
+        """Fetch the first (only) brand from the brands table."""
+        resp = requests.get(
+            f"{self.rest_url}/brands?select=id&limit=1",
+            headers=self.headers,
+            timeout=10,
+        )
+        resp.raise_for_status()
+        rows = resp.json()
+        if not rows:
+            print("Error: No brand found in brands table. Insert one first:")
+            print("  INSERT INTO brands (name) VALUES ('YourBrand');")
+            sys.exit(1)
+        return rows[0]["id"]
+
 
 def init_supabase():
     """Initialize Supabase client from env vars."""
@@ -717,16 +732,9 @@ def generate_ads(api_key, sb, brand_id, prompts):
 def main():
     parser = argparse.ArgumentParser(description="Creative Producer — Static Ad Generation")
     parser.add_argument("--prompts-file", required=True, help="Path to JSON file with ad prompts")
-    parser.add_argument("--brand-id", required=True, help="Brand UUID (from brands table)")
+    parser.add_argument("--brand-id", default=None, help="Brand UUID (auto-detected if omitted)")
     parser.add_argument("--output-dir", default=None, help="Local backup directory (optional)")
     args = parser.parse_args()
-
-    # Validate brand-id is a UUID
-    try:
-        uuid.UUID(args.brand_id)
-    except ValueError:
-        print(f"Error: --brand-id must be a valid UUID, got: {args.brand_id}")
-        sys.exit(1)
 
     # Prevent concurrent runs
     acquire_process_lock()
@@ -742,6 +750,18 @@ def main():
     api_key = load_config()
     sb = init_supabase()
 
+    # Auto-detect brand if not provided
+    if args.brand_id:
+        try:
+            uuid.UUID(args.brand_id)
+        except ValueError:
+            print(f"Error: --brand-id must be a valid UUID, got: {args.brand_id}")
+            sys.exit(1)
+        brand_id = args.brand_id
+    else:
+        brand_id = sb.get_single_brand_id()
+        print(f"Auto-detected brand: {brand_id}")
+
     # Load prompts
     with open(args.prompts_file) as f:
         prompts = json.load(f)
@@ -750,10 +770,10 @@ def main():
         prompts = [prompts]
 
     print(f"Loaded {len(prompts)} ad prompts")
-    print(f"Brand: {args.brand_id}")
+    print(f"Brand: {brand_id}")
 
     # Generate
-    manifest = generate_ads(api_key, sb, args.brand_id, prompts)
+    manifest = generate_ads(api_key, sb, brand_id, prompts)
 
     # Save manifest locally
     batch_dir = os.path.join(PROJECT_ROOT, "creatives", manifest["batch_id"])
