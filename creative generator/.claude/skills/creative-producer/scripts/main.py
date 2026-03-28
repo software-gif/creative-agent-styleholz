@@ -685,9 +685,15 @@ def generate_single_ad(api_key, sb, brand_id, batch_id, prompt_data, index, crea
     if generation_mode != "raw":
         image_bytes = composite_all_overlays(image_bytes, ad_prompt)
 
-    # Build filename
-    angle_slug = meta["angle"].lower().replace("/", "_").replace(" ", "_")
-    sub_angle_slug = meta["sub_angle"].lower().replace(" ", "_").replace("/", "_")
+    # Build filename (ASCII-safe, no umlauts)
+    def ascii_slug(s):
+        replacements = {"ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss", "Ä": "Ae", "Ö": "Oe", "Ü": "Ue"}
+        for k, v in replacements.items():
+            s = s.replace(k, v)
+        return s.lower().replace("/", "_").replace(" ", "_").replace("-", "_")
+
+    angle_slug = ascii_slug(meta["angle"])
+    sub_angle_slug = ascii_slug(meta["sub_angle"])
     variant = meta["variant"]
     fmt = meta["format"].replace(":", "x")
     ext_map = {"image/png": "png", "image/jpeg": "jpg", "image/webp": "webp"}
