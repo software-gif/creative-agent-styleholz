@@ -1,11 +1,11 @@
 {
   "typography": {
-    "primary_font": "Lora",
+    "primary_font": "New Spirit",
     "primary_weight": "Bold",
     "secondary_font": "Assistant",
     "secondary_weight": "Medium",
     "heading_style": "elegant, serif, warm und natürlich",
-    "notes": "Lora Bold für Headlines (Serif, edel). Assistant Medium für Sub-Headlines und Body (Sans-Serif, klar). Warme, einladende Typografie passend zum Holz-Thema."
+    "notes": "New Spirit Bold für Headlines (Serif, edel, warm). Assistant Medium für Sub-Headlines und Body (Sans-Serif, klar). Andre bestätigte im Kick-Off: 'Headline New Spirit und Secondary Assistant'. Warme, einladende Typografie passend zum Holz-Thema."
   },
   "colors": {
     "primary": "#646E52",

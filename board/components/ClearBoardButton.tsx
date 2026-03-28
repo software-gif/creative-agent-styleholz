@@ -13,11 +13,16 @@ export default function ClearBoardButton() {
     if (!brandId || clearing) return;
     setClearing(true);
 
-    await supabase
+    const { error } = await supabase
       .from("creatives")
       .delete()
       .eq("brand_id", brandId)
       .eq("is_saved", false);
+
+    if (!error) {
+      // Force reload — bulk deletes don't always trigger realtime events
+      window.location.reload();
+    }
 
     setClearing(false);
     setConfirming(false);
