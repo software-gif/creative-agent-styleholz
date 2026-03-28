@@ -118,7 +118,7 @@ export default function CreativeCard({
             </span>
           )}
           {creative.season && creative.season !== "evergreen" && (
-            <span className="bg-accent/80 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded shadow-sm">
+            <span className="bg-accent/80 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded shadow-sm capitalize">
               {creative.season}
             </span>
           )}

@@ -46,7 +46,7 @@ export default function ImageOverlay({ creative, onClose }: ImageOverlayProps) {
               {creative.season && creative.season !== "evergreen" && (
                 <>
                   <span>·</span>
-                  <span className="text-white/70">{creative.season}</span>
+                  <span className="text-white/70 capitalize">{creative.season}</span>
                 </>
               )}
             </div>

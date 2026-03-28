@@ -172,15 +172,6 @@ export default function Board() {
             <option value="sommer">Sommer</option>
             <option value="herbst">Herbst</option>
             <option value="winter">Winter</option>
-            <option value="valentinstag">Valentinstag</option>
-            <option value="ostern">Ostern</option>
-            <option value="muttertag">Muttertag</option>
-            <option value="black_friday">Black Friday</option>
-            <option value="black_week">Black Week</option>
-            <option value="weihnachten">Weihnachten</option>
-            {seasons.filter((s) => !["evergreen","frühling","sommer","herbst","winter","valentinstag","ostern","muttertag","black_friday","black_week","weihnachten"].includes(s)).map((s) => (
-              <option key={s} value={s}>{s}</option>
-            ))}
           </select>
           {/* Angle dropdown */}
           <select
