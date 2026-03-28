@@ -85,6 +85,7 @@ export default function Board() {
     .filter((c) => filter === "all" || c.angle === filter)
     .filter((c) => styleFilter === "all" || c.creative_style === styleFilter);
   const doneCount = creatives.filter((c) => c.status === "done").length;
+  const generatingCount = creatives.filter((c) => c.status === "generating").length;
 
   if (brandLoading) {
     return (
@@ -108,24 +109,39 @@ export default function Board() {
   return (
     <div className="min-h-screen bg-background">
       {/* Filter Bar */}
-      <div className="sticky top-[57px] z-40 bg-surface border-b border-border px-6 py-2 flex items-center justify-between">
-        <span className="text-xs text-muted bg-background px-2 py-0.5 rounded">
-          {doneCount} Creatives
-        </span>
+      <div className="sticky top-[57px] z-40 bg-surface/95 backdrop-blur-sm border-b border-border px-6 py-2.5 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <select
-            value={styleFilter}
-            onChange={(e) => setStyleFilter(e.target.value)}
-            className="text-sm border border-border rounded-lg px-3 py-1.5 text-accent focus:outline-none focus:border-primary"
-          >
-            <option value="all">Alle Styles</option>
-            <option value="on_brand">On-Brand</option>
-            <option value="off_brand">Off-Brand</option>
-          </select>
+          <span className="text-xs font-semibold text-accent tabular-nums">
+            {filtered.length}
+            <span className="text-muted font-normal"> / {doneCount} Creatives</span>
+          </span>
+          {generatingCount > 0 && (
+            <span className="flex items-center gap-1.5 text-xs text-primary">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
+              {generatingCount} generiert...
+            </span>
+          )}
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="flex items-center bg-background rounded-lg p-0.5 gap-0.5">
+            {(["all", "on_brand", "off_brand"] as const).map((style) => (
+              <button
+                key={style}
+                onClick={() => setStyleFilter(style)}
+                className={`text-xs font-medium px-2.5 py-1 rounded-md transition-all ${
+                  styleFilter === style
+                    ? "bg-surface text-primary shadow-sm"
+                    : "text-muted hover:text-accent"
+                }`}
+              >
+                {style === "all" ? "Alle" : style === "on_brand" ? "On-Brand" : "Off-Brand"}
+              </button>
+            ))}
+          </div>
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="text-sm border border-border rounded-lg px-3 py-1.5 text-accent focus:outline-none focus:border-primary"
+            className="text-xs border border-border rounded-lg px-2.5 py-1.5 text-accent bg-surface focus:outline-none focus:border-primary"
           >
             <option value="all">Alle Angles</option>
             {angles.map((a) => (
@@ -145,10 +161,15 @@ export default function Board() {
             Laden...
           </div>
         ) : filtered.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-64 text-muted">
-            <p className="text-lg font-medium">Noch keine Creatives</p>
-            <p className="text-sm mt-1">
-              Generiere Ads per Claude Code — sie erscheinen hier automatisch.
+          <div className="flex flex-col items-center justify-center h-80 text-muted">
+            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-8 h-8 text-primary">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+              </svg>
+            </div>
+            <p className="text-lg font-semibold text-accent">Noch keine Creatives</p>
+            <p className="text-sm mt-1 max-w-xs text-center">
+              Generiere Ads per Claude Code — sie erscheinen hier live in Echtzeit.
             </p>
           </div>
         ) : (

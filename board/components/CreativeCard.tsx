@@ -69,57 +69,67 @@ export default function CreativeCard({
 
   return (
     <div
-      className="bg-surface rounded-xl border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+      className="group bg-surface rounded-xl border border-border overflow-hidden shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
       draggable={draggable}
       onDragStart={(e) => onDragStart?.(e, creative)}
     >
       {/* Image */}
       <div
-        className="relative aspect-[4/5] bg-gray-100 cursor-pointer"
+        className="relative aspect-[4/5] bg-background cursor-pointer overflow-hidden"
         onClick={() => imageUrl && onImageClick?.(creative)}
       >
         {creative.status === "generating" ? (
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
             <div className="w-10 h-10 border-3 border-primary border-t-transparent rounded-full animate-spin" />
+            <span className="text-xs text-muted">Wird generiert...</span>
           </div>
         ) : imageUrl ? (
           <img
             src={imageUrl}
             alt={creative.sub_angle}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
             loading="lazy"
           />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center text-muted text-sm">
-            Kein Bild
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-muted gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-8 h-8 opacity-40">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+            </svg>
+            <span className="text-xs">Kein Bild</span>
           </div>
         )}
-        <span className="absolute top-2 right-2 bg-white/90 text-[10px] font-semibold px-1.5 py-0.5 rounded">
-          {creative.format}
-        </span>
+        {/* Badges */}
+        <div className="absolute top-2 right-2 flex gap-1">
+          <span className="bg-white/90 backdrop-blur-sm text-[10px] font-semibold px-1.5 py-0.5 rounded shadow-sm">
+            {creative.format}
+          </span>
+        </div>
         {creative.creative_style === "off_brand" && (
-          <span className="absolute top-2 left-2 bg-orange-500/90 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded">
-            OFF
+          <span className="absolute top-2 left-2 bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">
+            OFF-BRAND
           </span>
         )}
       </div>
 
       {/* Meta */}
       <div className="p-3">
-        <div
-          className={`text-[11px] font-semibold uppercase tracking-wide ${ANGLE_COLORS[creative.angle] || "text-gray-500"}`}
-        >
-          {ANGLE_EMOJI[creative.angle]} {creative.angle}
+        <div className="flex items-center gap-1.5">
+          <span className="text-sm">{ANGLE_EMOJI[creative.angle]}</span>
+          <span
+            className={`text-[11px] font-semibold uppercase tracking-wide ${ANGLE_COLORS[creative.angle] || "text-gray-500"}`}
+          >
+            {creative.angle}
+          </span>
         </div>
-        <div className="text-sm font-semibold text-accent mt-0.5 leading-tight">
+        <div className="text-[13px] font-semibold text-accent mt-1 leading-snug">
           {creative.sub_angle}
         </div>
         {creative.hook_text && (
-          <div className="text-xs text-muted mt-1 italic line-clamp-2">
-            {creative.hook_text}
+          <div className="text-xs text-muted mt-1.5 leading-relaxed line-clamp-2">
+            &ldquo;{creative.hook_text}&rdquo;
           </div>
         )}
-        {actions && <div className="mt-2 flex items-center gap-2">{actions}</div>}
+        {actions && <div className="mt-2.5 flex items-center gap-2">{actions}</div>}
       </div>
     </div>
   );
