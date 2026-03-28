@@ -635,11 +635,15 @@ def composite_all_overlays(image_bytes, ad_prompt):
 # Single ad generation + upload
 # ---------------------------------------------------------------------------
 
-def generate_single_ad(api_key, sb, brand_id, batch_id, prompt_data, index, creative_id):
+def generate_single_ad(api_key, sb, brand_id, batch_id, prompt_data, index, creative_id, raw_only=False):
     """Generate a single ad, composite logo, upload to Supabase Storage, update row."""
     ad_prompt = prompt_data["prompt"]
     product_image = prompt_data["product_image"]
     meta = ad_prompt["meta"]
+    creative_style = meta.get("creative_style", "on_brand")
+    generation_mode = meta.get("generation_mode", "both")
+    if raw_only:
+        generation_mode = "raw"
     hook_text = next(
         (t["content"] for t in ad_prompt.get("text_overlays", []) if t["role"] == "headline"),
         ""
@@ -654,8 +658,16 @@ def generate_single_ad(api_key, sb, brand_id, batch_id, prompt_data, index, crea
         sb.update_creative(creative_id, {"status": "failed"})
         return None
 
-    # Build payload & call Gemini
-    payload = build_gemini_prompt(ad_prompt, img_path)
+    # For raw mode, create a stripped prompt without text overlays
+    if generation_mode == "raw":
+        raw_prompt = dict(ad_prompt)
+        raw_prompt["text_overlays"] = []
+        raw_prompt["brand_elements"] = {}
+        raw_prompt["visual_elements"] = {}
+        payload = build_gemini_prompt(raw_prompt, img_path)
+    else:
+        payload = build_gemini_prompt(ad_prompt, img_path)
+
     image_data, mime_type = call_gemini(api_key, payload)
 
     if not image_data:
@@ -666,8 +678,12 @@ def generate_single_ad(api_key, sb, brand_id, batch_id, prompt_data, index, crea
     # Decode image
     image_bytes = base64.standard_b64decode(image_data)
 
-    # Composite all overlays (logo, social proof, payment icons, etc.)
-    image_bytes = composite_all_overlays(image_bytes, ad_prompt)
+    # Save raw version before compositing (for 'both' mode)
+    raw_image_bytes = image_bytes
+
+    # Composite all overlays only if not raw-only
+    if generation_mode != "raw":
+        image_bytes = composite_all_overlays(image_bytes, ad_prompt)
 
     # Build filename
     angle_slug = meta["angle"].lower().replace("/", "_").replace(" ", "_")
@@ -691,12 +707,24 @@ def generate_single_ad(api_key, sb, brand_id, batch_id, prompt_data, index, crea
         sb.update_creative(creative_id, {"status": "failed"})
         return None
 
+    # Also upload raw version for 'both' mode
+    if generation_mode == "both" and raw_image_bytes != image_bytes:
+        raw_storage_path = f"{brand_id}/{batch_id}/raw/{filename}"
+        try:
+            sb.upload_file("creatives", raw_storage_path, raw_image_bytes, content_type)
+            print(f"  Raw uploaded: {raw_storage_path}")
+        except Exception as e:
+            print(f"  Raw upload failed (non-critical): {e}")
+
     # Update creative row → done
-    sb.update_creative(creative_id, {
+    updates = {
         "status": "done",
         "storage_path": storage_path,
         "image_url": image_url,
-    })
+    }
+    if creative_style:
+        updates["creative_style"] = creative_style
+    sb.update_creative(creative_id, updates)
     print(f"  Creative updated: image live!")
 
     # Also save locally as backup
@@ -723,7 +751,7 @@ def generate_single_ad(api_key, sb, brand_id, batch_id, prompt_data, index, crea
 # Orchestrator
 # ---------------------------------------------------------------------------
 
-def generate_ads(api_key, sb, brand_id, prompts):
+def generate_ads(api_key, sb, brand_id, prompts, raw_only=False):
     """Generate all ads in parallel with Supabase tracking."""
     batch_id = str(uuid.uuid4())
     print(f"Batch ID: {batch_id}")
@@ -748,6 +776,7 @@ def generate_ads(api_key, sb, brand_id, prompts):
             "hook_text": hook_text,
             "status": "generating",
             "is_saved": False,
+            "creative_style": meta.get("creative_style", "on_brand"),
         }
 
         try:
@@ -781,7 +810,7 @@ def generate_ads(api_key, sb, brand_id, prompts):
                 continue
             future = executor.submit(
                 generate_single_ad,
-                api_key, sb, brand_id, batch_id, prompt_data, i, creative_id
+                api_key, sb, brand_id, batch_id, prompt_data, i, creative_id, raw_only
             )
             futures[future] = i
 
@@ -810,6 +839,7 @@ def main():
     parser.add_argument("--prompts-file", required=True, help="Path to JSON file with ad prompts")
     parser.add_argument("--brand-id", default=None, help="Brand UUID (auto-detected if omitted)")
     parser.add_argument("--output-dir", default=None, help="Local backup directory (optional)")
+    parser.add_argument("--raw-only", action="store_true", help="Generate only raw images without text overlays or compositor")
     args = parser.parse_args()
 
     # Prevent concurrent runs
@@ -849,7 +879,7 @@ def main():
     print(f"Brand: {brand_id}")
 
     # Generate
-    manifest = generate_ads(api_key, sb, brand_id, prompts)
+    manifest = generate_ads(api_key, sb, brand_id, prompts, raw_only=args.raw_only)
 
     # Save manifest locally
     batch_dir = os.path.join(PROJECT_ROOT, "creatives", manifest["batch_id"])

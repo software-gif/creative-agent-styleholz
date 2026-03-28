@@ -89,5 +89,62 @@
       "position": "above_cta",
       "color": "#646E52"
     }
+  },
+  "creative_styles": {
+    "on_brand": {
+      "name": "On-Brand / High Polish",
+      "description": "Brand-konforme, hochwertige Ads mit CI-Farben, Lora + Assistant Fonts, clean Design. Premium-Look passend zum Holz-Thema.",
+      "fonts": {
+        "headline": "Lora Bold (Serif)",
+        "body": "Assistant Medium (Sans-Serif)"
+      },
+      "colors": "Brand-Palette (Waldgrün, Creme, Braun)",
+      "layout": "Strukturiert mit klaren Zonen, professionelle Typografie",
+      "backgrounds": ["Warmes Creme (#FAF5F0)", "Natürliche Holzoberfläche", "Natur-Setting"],
+      "use_case": "Offizieller Ad Account, Brand Building, Retargeting"
+    },
+    "off_brand": {
+      "name": "Off-Brand / Ugly Ads / Native-Look",
+      "description": "Bewusst unpoliert, wie ein organischer Social Media Post. Sieht aus wie User-Generated Content, nicht wie Werbung. Diese Ads konvertieren auf Meta DEUTLICH besser als polierte Ads.",
+      "fonts": {
+        "headline": "System-Fonts, handschriftliche Fonts, oder einfache Sans-Serif (kein CI-Font)",
+        "body": "Einfache, ungestylte Fonts"
+      },
+      "colors": "Keine Brand-Farben — freie Farbwahl passend zum Inhalt, kontrastreich",
+      "layout": "Weniger strukturiert, asymmetrisch, organisch. Wie mit Paint oder Canva schnell zusammengebaut.",
+      "backgrounds": ["Handy-Foto Look", "Screenshot-Ästhetik", "Simple einfarbige Hintergründe", "Unscharfe Alltagsszenen"],
+      "elements": [
+        "Handschriftliche Markierungen/Pfeile",
+        "Gelbe/rote Highlights wie Textmarker",
+        "Emojis im Text",
+        "Einfache Icons statt professioneller Grafiken",
+        "Review-Screenshots als Hintergrund"
+      ],
+      "use_case": "Frontend Prospecting, Cold Audience, Meta Andromeda Diversification",
+      "note": "Andre (Founder) kann als ehemaliger Creative Director keine Ugly Ads selbst machen — der Designer in ihm wehrt sich. Das ist ein Hauptmehrwert des Agents."
+    }
+  },
+  "text_overlay_elements": {
+    "headline": {
+      "required": true,
+      "note": "Fast immer dabei, auch bei Ugly Ads"
+    },
+    "sub_headline": {
+      "required": false,
+      "note": "Optional, ergänzend zur Headline"
+    },
+    "icons_with_benefits": {
+      "required": false,
+      "note": "Optional aber sehr wirkungsvoll. Best-performing Ad hatte 4 Icons mit Benefits. Benefits idealerweise aus Kundenbewertungen ziehen.",
+      "source": "reviews"
+    },
+    "cta": {
+      "required": false,
+      "note": "Optional, z.B. 'Jetzt entdecken', 'Sets ansehen'"
+    },
+    "logo": {
+      "required": false,
+      "note": "Sehr optional. Andre nutzt Logo fast nie in Ads, da es oben links im Meta-Profil sowieso angezeigt wird."
+    }
   }
 }

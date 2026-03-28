@@ -16,6 +16,7 @@ export default function Board() {
   const { brandId, loading: brandLoading } = useBrand();
   const [creatives, setCreatives] = useState<Creative[]>([]);
   const [filter, setFilter] = useState("all");
+  const [styleFilter, setStyleFilter] = useState("all");
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<Creative | null>(null);
 
@@ -80,8 +81,9 @@ export default function Board() {
   }
 
   const angles = [...new Set(creatives.map((c) => c.angle))];
-  const filtered =
-    filter === "all" ? creatives : creatives.filter((c) => c.angle === filter);
+  const filtered = creatives
+    .filter((c) => filter === "all" || c.angle === filter)
+    .filter((c) => styleFilter === "all" || c.creative_style === styleFilter);
   const doneCount = creatives.filter((c) => c.status === "done").length;
 
   if (brandLoading) {
@@ -110,19 +112,30 @@ export default function Board() {
         <span className="text-xs text-muted bg-background px-2 py-0.5 rounded">
           {doneCount} Creatives
         </span>
-        <select
-          value={filter}
-          onChange={(e) => setFilter(e.target.value)}
-          className="text-sm border border-border rounded-lg px-3 py-1.5 text-accent focus:outline-none focus:border-primary"
-        >
-          <option value="all">Alle Angles</option>
-          {angles.map((a) => (
-            <option key={a} value={a}>
-              {ANGLE_EMOJI[a] || ""} {a} (
-              {creatives.filter((c) => c.angle === a).length})
-            </option>
-          ))}
-        </select>
+        <div className="flex items-center gap-3">
+          <select
+            value={styleFilter}
+            onChange={(e) => setStyleFilter(e.target.value)}
+            className="text-sm border border-border rounded-lg px-3 py-1.5 text-accent focus:outline-none focus:border-primary"
+          >
+            <option value="all">Alle Styles</option>
+            <option value="on_brand">On-Brand</option>
+            <option value="off_brand">Off-Brand</option>
+          </select>
+          <select
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            className="text-sm border border-border rounded-lg px-3 py-1.5 text-accent focus:outline-none focus:border-primary"
+          >
+            <option value="all">Alle Angles</option>
+            {angles.map((a) => (
+              <option key={a} value={a}>
+                {ANGLE_EMOJI[a] || ""} {a} (
+                {creatives.filter((c) => c.angle === a).length})
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {/* Grid */}

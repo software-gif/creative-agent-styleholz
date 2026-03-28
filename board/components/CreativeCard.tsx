@@ -15,6 +15,7 @@ export type Creative = {
   image_url: string | null;
   storage_path: string | null;
   is_saved: boolean;
+  creative_style: string;
   created_at: string;
 };
 
@@ -96,6 +97,11 @@ export default function CreativeCard({
         <span className="absolute top-2 right-2 bg-white/90 text-[10px] font-semibold px-1.5 py-0.5 rounded">
           {creative.format}
         </span>
+        {creative.creative_style === "off_brand" && (
+          <span className="absolute top-2 left-2 bg-orange-500/90 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded">
+            OFF
+          </span>
+        )}
       </div>
 
       {/* Meta */}

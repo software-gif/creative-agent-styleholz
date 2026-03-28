@@ -228,6 +228,62 @@
   "social_proof": {
     "trustpilot_rating": null,
     "shop_rating": 4.9,
-    "total_reviews": 972
+    "total_reviews": 972,
+    "review_source": "reviews.io"
+  },
+  "target_audience": {
+    "gender": "female",
+    "age_range": "40-55",
+    "description": "Frauen in den Wechseljahren, 40-55 Jahre. Haben Alltagsbeschwerden wie Verspannungen, schwere Beine, Schmerzen — aber sind NICHT sportlich/athletisch. Suchen eine einfache Lösung für mehr Wohlbefinden.",
+    "lifestyle": "Zuhause-orientiert, Wellness im Alltag, kein Sport-/Trainingskontext",
+    "pain_points": [
+      "Verspannungen im Nacken, Rücken, Schultern",
+      "Schwere, müde Beine",
+      "Klassische Faszienrolle ist zu anstrengend (am Boden rollen, Körperspannung halten)",
+      "Wollen etwas für ihren Körper tun, aber ohne großen Aufwand"
+    ],
+    "values": [
+      "Natürliche Materialien (Holz statt Plastik)",
+      "Einfache Anwendung",
+      "Qualität & Langlebigkeit",
+      "Nachhaltigkeit"
+    ],
+    "settings_for_images": [
+      "Wohnzimmer / Sofa",
+      "Schlafzimmer / Bett",
+      "Garten / Terrasse (Frühling/Sommer)",
+      "NIEMALS: Fitnessstudio, Sportumgebung, Trainingskontext"
+    ]
+  },
+  "winning_angles": {
+    "primary": "Vergleich mit klassischer Faszienrolle — einfachere Anwendung",
+    "sub_themes": [
+      "Verspannungen lösen — bequem im Sitzen",
+      "Schwere Beine — leichte Beine dank styleholz",
+      "Kein Boden-Rollen mehr — styleholz geht im Sitzen"
+    ],
+    "note": "Dieser Angle läuft seit 3.5 Jahren. Braucht neue ORTE/WEGE den gleichen Angle zu transportieren, nicht unbedingt neue Angles."
+  },
+  "dos_and_donts": {
+    "dos": [
+      "Wohlbefinden, Leichtigkeit im Alltag betonen",
+      "Einfache Anwendung hervorheben (im Sitzen, am Sofa)",
+      "Natürliches Holz, Haptik, Wärme kommunizieren",
+      "Kundenbewertungen als Social Proof nutzen",
+      "Mehr Haut zeigen (zeigt Holz-auf-Haut Vorteil)"
+    ],
+    "donts": [
+      "KEINE Heilversprechen — Produkt ist KEIN Medizinprodukt",
+      "KEIN Sport-/Fitness-/Gym-Kontext",
+      "KEINE medizinischen Claims (z.B. 'heilt', 'therapiert')",
+      "Formulierungen wie 'fördert', 'unterstützt', 'kann helfen' statt 'heilt', 'beseitigt'",
+      "KEINE jungen/sportlichen Models — Zielgruppe ist 40-55"
+    ]
+  },
+  "priority_products": {
+    "hero": "faszienstab-woodstick-flex-gerillt",
+    "sets": ["faszientraining-komplett-set", "faszientraining-starter-set-gerillt"],
+    "test_category": ["muskel-aktiv-spray-zirbe", "venen-vital-spray-rosskastanie-weinlaub", "schlaf-balance-spray-lavendel"],
+    "lower_priority": ["faszienstab-woodstick-mini", "akupressur-igelball-roller", "fussmassage-roller-holz-fussreflexzone"]
   }
 }

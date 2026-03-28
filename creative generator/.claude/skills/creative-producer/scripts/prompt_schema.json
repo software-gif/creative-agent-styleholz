@@ -8,6 +8,8 @@
     "sub_angle": "string — Name des Sub-Angles (z.B. 'Kaputte Pumpspender')",
     "variant": "integer — Varianten-Nummer (1, 2 oder 3)",
     "scene_type": "string — 'negative' | 'neutral' | 'positive'. PFLICHT. 'negative' = Szene zeigt Problem/Pain/Konkurrenz-Kritik → Produktbild wird NICHT an Gemini gesendet, generisches Produkt wird erzwungen. 'positive'/'neutral' = Produkt darf gezeigt werden.",
+    "creative_style": "string — 'on_brand' | 'off_brand'. PFLICHT. 'on_brand' = CI-konforme Ads (Lora Bold + Assistant Medium, Brand-Farben). 'off_brand' = Ugly Ads / Native-Look (freie Fonts, keine CI-Farben, organisch wie UGC). Off-Brand konvertiert besser auf Meta.",
+    "generation_mode": "string — 'raw' | 'composited' | 'both'. 'raw' = nur Lifestyle/Produkt-Bild ohne Text-Overlay. 'composited' = mit Text + Compositor. 'both' = Raw + Composited werden beide gespeichert. Default: 'both'.",
     "format": "string — '4:5' oder '9:16'",
     "resolution": {
       "width": "integer — Pixelbreite (4:5 = 1536, 9:16 = 2160)",
@@ -94,7 +96,7 @@
         "offset_y_percent": "integer | null — Fein-Offset in % der Höhe"
       },
       "style": {
-        "font_family": "string — 'serif_elegant' | 'sans_modern' | 'sans_bold' | 'handwritten'",
+        "font_family": "string — 'serif_elegant' | 'sans_modern' | 'sans_bold' | 'handwritten'. On-Brand: 'serif_elegant' = Lora Bold (Headlines), 'sans_modern' = Assistant Medium (Body). Off-Brand: freie Wahl, z.B. 'handwritten', 'sans_bold', System-Fonts.",
         "font_weight": "string — 'regular' | 'medium' | 'semibold' | 'bold'",
         "font_size": "string — 'xs' (12px) | 'sm' (16px) | 'md' (24px) | 'lg' (36px) | 'xl' (48px) | 'xxl' (64px) | 'display' (80px+)",
         "color": "string — Hex-Farbcode",
