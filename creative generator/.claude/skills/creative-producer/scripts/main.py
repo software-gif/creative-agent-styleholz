@@ -783,6 +783,8 @@ def generate_ads(api_key, sb, brand_id, prompts, raw_only=False):
             "status": "generating",
             "is_saved": False,
             "creative_style": meta.get("creative_style", "on_brand"),
+            "creative_type": meta.get("creative_type", "product_static"),
+            "season": meta.get("season", "evergreen"),
         }
 
         try:

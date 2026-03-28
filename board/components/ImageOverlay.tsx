@@ -37,10 +37,18 @@ export default function ImageOverlay({ creative, onClose }: ImageOverlayProps) {
             {creative.hook_text && (
               <p className="text-sm text-white/70 mt-2 italic">&ldquo;{creative.hook_text}&rdquo;</p>
             )}
-            <div className="flex items-center gap-2 mt-3 pt-3 border-t border-white/10 text-xs text-white/50">
+            <div className="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-white/10 text-xs text-white/50">
               <span>{creative.format}</span>
               <span>·</span>
               <span>{creative.creative_style === "off_brand" ? "Off-Brand" : "On-Brand"}</span>
+              <span>·</span>
+              <span>{creative.creative_type === "lifestyle" ? "Lifestyle" : "Product"}</span>
+              {creative.season && creative.season !== "evergreen" && (
+                <>
+                  <span>·</span>
+                  <span className="text-white/70">{creative.season}</span>
+                </>
+              )}
             </div>
             {imageUrl && (
               <a

@@ -16,6 +16,8 @@ export type Creative = {
   storage_path: string | null;
   is_saved: boolean;
   creative_style: string;
+  creative_type: string;
+  season: string;
   created_at: string;
 };
 
@@ -100,15 +102,27 @@ export default function CreativeCard({
         )}
         {/* Badges */}
         <div className="absolute top-2 right-2 flex gap-1">
+          {creative.creative_type === "lifestyle" && (
+            <span className="bg-primary/90 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded shadow-sm">
+              Lifestyle
+            </span>
+          )}
           <span className="bg-white/90 backdrop-blur-sm text-[10px] font-semibold px-1.5 py-0.5 rounded shadow-sm">
             {creative.format}
           </span>
         </div>
-        {creative.creative_style === "off_brand" && (
-          <span className="absolute top-2 left-2 bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">
-            OFF-BRAND
-          </span>
-        )}
+        <div className="absolute top-2 left-2 flex gap-1">
+          {creative.creative_style === "off_brand" && (
+            <span className="bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">
+              OFF
+            </span>
+          )}
+          {creative.season && creative.season !== "evergreen" && (
+            <span className="bg-accent/80 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded shadow-sm">
+              {creative.season}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Meta */}

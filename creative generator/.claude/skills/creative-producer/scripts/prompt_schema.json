@@ -8,7 +8,9 @@
     "sub_angle": "string — Name des Sub-Angles (z.B. 'Kaputte Pumpspender')",
     "variant": "integer — Varianten-Nummer (1, 2 oder 3)",
     "scene_type": "string — 'negative' | 'neutral' | 'positive'. PFLICHT. 'negative' = Szene zeigt Problem/Pain/Konkurrenz-Kritik → Produktbild wird NICHT an Gemini gesendet, generisches Produkt wird erzwungen. 'positive'/'neutral' = Produkt darf gezeigt werden.",
-    "creative_style": "string — 'on_brand' | 'off_brand'. PFLICHT. 'on_brand' = CI-konforme Ads (Lora Bold + Assistant Medium, Brand-Farben). 'off_brand' = Ugly Ads / Native-Look (freie Fonts, keine CI-Farben, organisch wie UGC). Off-Brand konvertiert besser auf Meta.",
+    "creative_style": "string — 'on_brand' | 'off_brand'. PFLICHT. 'on_brand' = CI-konforme Ads (New Spirit Bold + Assistant Medium, Brand-Farben). 'off_brand' = Ugly Ads / Native-Look (freie Fonts, keine CI-Farben, organisch wie UGC). Off-Brand konvertiert besser auf Meta. Andre sagt: 60% On-Brand, 40% Off-Brand.",
+    "creative_type": "string — 'lifestyle' | 'product_static'. PFLICHT. 'lifestyle' = Frau 45+ nutzt Produkt in echtem Setting (Sofa, Garten, Bett). Nur Headline + Subheadline. 'product_static' = Produkt-Hero-Shot mit Text-Overlays, Icons, Benefits, CTA.",
+    "season": "string — 'evergreen' | 'sommer' | 'frühling' | 'herbst' | 'winter' | 'valentinstag' | 'ostern' | 'muttertag' | 'black_friday' | 'black_week' | 'weihnachten'. Default: 'evergreen'. Bestimmt Umgebung, Farben, Kleidung der Person.",
     "generation_mode": "string — 'raw' | 'composited' | 'both'. 'raw' = nur Lifestyle/Produkt-Bild ohne Text-Overlay. 'composited' = mit Text + Compositor. 'both' = Raw + Composited werden beide gespeichert. Default: 'both'.",
     "format": "string — '4:5' oder '9:16'",
     "resolution": {

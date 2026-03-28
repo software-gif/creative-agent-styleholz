@@ -17,6 +17,8 @@ export default function Board() {
   const [creatives, setCreatives] = useState<Creative[]>([]);
   const [filter, setFilter] = useState("all");
   const [styleFilter, setStyleFilter] = useState("all");
+  const [typeFilter, setTypeFilter] = useState("all");
+  const [seasonFilter, setSeasonFilter] = useState("all");
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<Creative | null>(null);
 
@@ -81,9 +83,12 @@ export default function Board() {
   }
 
   const angles = [...new Set(creatives.map((c) => c.angle))];
+  const seasons = [...new Set(creatives.map((c) => c.season).filter(Boolean))];
   const filtered = creatives
     .filter((c) => filter === "all" || c.angle === filter)
-    .filter((c) => styleFilter === "all" || c.creative_style === styleFilter);
+    .filter((c) => styleFilter === "all" || c.creative_style === styleFilter)
+    .filter((c) => typeFilter === "all" || c.creative_type === typeFilter)
+    .filter((c) => seasonFilter === "all" || c.season === seasonFilter);
   const doneCount = creatives.filter((c) => c.status === "done").length;
   const generatingCount = creatives.filter((c) => c.status === "generating").length;
 
@@ -123,6 +128,23 @@ export default function Board() {
           )}
         </div>
         <div className="flex items-center gap-2">
+          {/* Type toggle */}
+          <div className="flex items-center bg-background rounded-lg p-0.5 gap-0.5">
+            {(["all", "lifestyle", "product_static"] as const).map((type) => (
+              <button
+                key={type}
+                onClick={() => setTypeFilter(type)}
+                className={`text-xs font-medium px-2.5 py-1 rounded-md transition-all ${
+                  typeFilter === type
+                    ? "bg-surface text-primary shadow-sm"
+                    : "text-muted hover:text-accent"
+                }`}
+              >
+                {type === "all" ? "Alle" : type === "lifestyle" ? "Lifestyle" : "Product"}
+              </button>
+            ))}
+          </div>
+          {/* Style toggle */}
           <div className="flex items-center bg-background rounded-lg p-0.5 gap-0.5">
             {(["all", "on_brand", "off_brand"] as const).map((style) => (
               <button
@@ -138,6 +160,29 @@ export default function Board() {
               </button>
             ))}
           </div>
+          {/* Season dropdown */}
+          <select
+            value={seasonFilter}
+            onChange={(e) => setSeasonFilter(e.target.value)}
+            className="text-xs border border-border rounded-lg px-2.5 py-1.5 text-accent bg-surface focus:outline-none focus:border-primary"
+          >
+            <option value="all">Alle Seasons</option>
+            <option value="evergreen">Evergreen</option>
+            <option value="frühling">Frühling</option>
+            <option value="sommer">Sommer</option>
+            <option value="herbst">Herbst</option>
+            <option value="winter">Winter</option>
+            <option value="valentinstag">Valentinstag</option>
+            <option value="ostern">Ostern</option>
+            <option value="muttertag">Muttertag</option>
+            <option value="black_friday">Black Friday</option>
+            <option value="black_week">Black Week</option>
+            <option value="weihnachten">Weihnachten</option>
+            {seasons.filter((s) => !["evergreen","frühling","sommer","herbst","winter","valentinstag","ostern","muttertag","black_friday","black_week","weihnachten"].includes(s)).map((s) => (
+              <option key={s} value={s}>{s}</option>
+            ))}
+          </select>
+          {/* Angle dropdown */}
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
