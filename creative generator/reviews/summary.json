@@ -1,0 +1,11 @@
+{
+  "source": "reviews.io",
+  "store": "www.styleholz.com",
+  "total_scraped": 1000,
+  "rating_distribution": {
+    "5": 949,
+    "4": 46,
+    "3": 5
+  },
+  "average_rating": 4.94
+}

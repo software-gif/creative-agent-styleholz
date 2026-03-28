@@ -53,8 +53,8 @@ def prepare_summary(brand, reviews, winners):
     def format_reviews(review_list, max_count=40):
         formatted = []
         for r in review_list[:max_count]:
-            text = r.get("text", "").strip()
-            title = r.get("title", "").strip()
+            text = (r.get("text") or r.get("comments") or "").strip()
+            title = (r.get("title") or "").strip()
             if text or title:
                 entry = f"[{r['rating']}★]"
                 if title:

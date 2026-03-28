@@ -1,0 +1,221 @@
+{
+  "brand": "styleholz",
+  "generated_from": "1000 Reviews.io reviews + Kick-Off Insights",
+  "angles": {
+    "Problem/Pain": {
+      "description": "Zeigt das Problem, das die Zielgruppe hat — ohne das styleholz Produkt",
+      "sub_angles": [
+        {
+          "name": "Faszienrolle ist umständlich",
+          "hook_suggestions": [
+            "Kennst du das auch? Am Boden rumrollen für Faszientraining?",
+            "Warum tust du dir das noch an? Faszienrolle am Boden...",
+            "Faszientraining muss nicht so kompliziert sein"
+          ],
+          "review_evidence": "Viele Kunden berichten, dass sie die klassische Faszienrolle aufgegeben haben, weil das Rollen am Boden zu anstrengend war.",
+          "scene_type": "negative"
+        },
+        {
+          "name": "Verspannungen im Alltag",
+          "hook_suggestions": [
+            "Nacken wieder total verspannt?",
+            "Jeden Abend dasselbe: Schultern wie Beton",
+            "Dein Körper schreit nach Entspannung"
+          ],
+          "review_evidence": "Häufigste Beschwerde: Verspannungen in Nacken, Schultern und Rücken durch Alltagsbelastung.",
+          "scene_type": "negative"
+        },
+        {
+          "name": "Schwere müde Beine",
+          "hook_suggestions": [
+            "Schwere Beine nach einem langen Tag?",
+            "Kennst du dieses Gefühl — Beine wie Blei?",
+            "Müde Beine? Das muss nicht sein"
+          ],
+          "review_evidence": "Leichte-Beine-Set ist zweitstärkstes Set. Viele Kundinnen berichten von Besserung.",
+          "scene_type": "negative"
+        }
+      ]
+    },
+    "Benefit": {
+      "description": "Zeigt den konkreten Vorteil des styleholz Produkts",
+      "sub_angles": [
+        {
+          "name": "Einfacher als Faszienrolle",
+          "hook_suggestions": [
+            "So einfach war Faszientraining noch nie",
+            "Faszientraining? Einfach im Sitzen — ohne am Boden zu rollen",
+            "Vergiss die Faszienrolle. Das hier geht im Sitzen."
+          ],
+          "review_evidence": "'Sehr angenehm in der Handhabung', 'funktioniert!!', 'sehr effektiv' — Kunden lieben die einfache Anwendung.",
+          "scene_type": "positive"
+        },
+        {
+          "name": "Bequem im Sitzen anwenden",
+          "hook_suggestions": [
+            "Am Sofa sitzen und gleichzeitig was für deinen Körper tun",
+            "Faszientraining auf dem Sofa — ja, wirklich",
+            "Dein Abend-Ritual: Sofa, Tee & Woodstick"
+          ],
+          "review_evidence": "'Tolle Produkte', 'freue mich jeden Tag wenn ich die Produkte verwende' — tägliche Nutzung im Alltag.",
+          "scene_type": "positive"
+        },
+        {
+          "name": "Natürliches Holz statt Plastik",
+          "hook_suggestions": [
+            "Fühlt sich einfach besser an als Plastik",
+            "Warum Holz? Weil deine Haut den Unterschied spürt",
+            "Nachhaltiges Eschenholz statt Billig-Plastik"
+          ],
+          "review_evidence": "'Schönes Holz', 'tolle Qualität', 'Super Verarbeitung, tolles Holz' — Holz-Haptik wird immer wieder gelobt.",
+          "scene_type": "positive"
+        },
+        {
+          "name": "Verspannungen lösen",
+          "hook_suggestions": [
+            "Meine Verspannungen haben sich endlich gebessert",
+            "Endlich wieder schmerzfrei — dank einem Holzstab",
+            "Verspannungen? Dieses Tool löst sie in Minuten"
+          ],
+          "review_evidence": "'Meine Verspannungen haben sich gebessert!', 'Es hilft tatsächlich', 'sehr effektiv'",
+          "scene_type": "positive"
+        }
+      ]
+    },
+    "Proof": {
+      "description": "Social Proof — echte Kundenstimmen und Zahlen",
+      "sub_angles": [
+        {
+          "name": "Kundenstimmen",
+          "hook_suggestions": [
+            "Das sagen über 15.000 Kundinnen",
+            "4.9 Sterne — und das bei über 15.000 Bewertungen",
+            "\"Es hilft tatsächlich\" — verifizierte Kundin"
+          ],
+          "review_evidence": "4.94 Durchschnitt bei 15.500+ Reviews. 99% Weiterempfehlung.",
+          "scene_type": "positive"
+        },
+        {
+          "name": "Physiotherapeut empfiehlt",
+          "hook_suggestions": [
+            "Von Physiotherapeuten empfohlen",
+            "Mein PT hat mir diesen Stab empfohlen",
+            "Warum Physios auf diesen Holzstab setzen"
+          ],
+          "review_evidence": "'Ich habe das Produkt von meinem PT empfohlen bekommen' — mehrere Reviews erwähnen Empfehlung durch Therapeuten.",
+          "scene_type": "positive"
+        },
+        {
+          "name": "Handgefertigt in Österreich",
+          "hook_suggestions": [
+            "Handgefertigt in Österreich — echte Qualität",
+            "Kleiner Familienbetrieb, große Wirkung",
+            "10 Jahre Garantie — weil wir an unser Holz glauben"
+          ],
+          "review_evidence": "'Qualität Top', '10 Jahre Garantie überzeugt', 'Umweltfreundliche Verpackung'",
+          "scene_type": "positive"
+        }
+      ]
+    },
+    "Curiosity": {
+      "description": "Weckt Neugier — ungewöhnliche Perspektive auf das Produkt",
+      "sub_angles": [
+        {
+          "name": "Dieser Holzstab",
+          "hook_suggestions": [
+            "Dieser Holzstab hat mein Abend-Ritual verändert",
+            "Was dieser Holzstab kann, schafft keine Faszienrolle",
+            "Ein Stab aus Holz — und plötzlich keine Verspannungen mehr?"
+          ],
+          "review_evidence": "Kunden beschreiben häufig überraschende Wirkung und tägliche Nutzung.",
+          "scene_type": "positive"
+        },
+        {
+          "name": "Warum alle ihre Faszienrolle wegwerfen",
+          "hook_suggestions": [
+            "Warum immer mehr Frauen ihre Faszienrolle wegwerfen",
+            "Der Grund, warum Faszienrollen out sind",
+            "Faszienrollen haben ein Problem — und das ist die Lösung"
+          ],
+          "review_evidence": "Vergleich mit Faszienrolle ist der stärkste Conversion-Angle seit 3.5 Jahren.",
+          "scene_type": "positive"
+        }
+      ]
+    },
+    "Story": {
+      "description": "Persönliche Geschichte — emotionaler Zugang",
+      "sub_angles": [
+        {
+          "name": "Geschenk das begeistert",
+          "hook_suggestions": [
+            "Das beste Geschenk, das ich je gemacht habe",
+            "Meine Mama hat sich SO gefreut",
+            "Weihnachtsgeschenk gesucht? Das hier begeistert wirklich"
+          ],
+          "review_evidence": "'War als Weihnachtsgeschenk gekauft', 'verschenken wollte', 'Familie ausprobieren lassen' — Geschenke-Angle in Reviews stark.",
+          "scene_type": "positive"
+        },
+        {
+          "name": "Endlich wieder schmerzfrei",
+          "hook_suggestions": [
+            "Nach Jahren endlich wieder ohne Verspannungen einschlafen",
+            "Ich dachte, Verspannungen gehören einfach dazu — bis ich DAS entdeckt habe",
+            "Mein Weg von täglichen Schmerzen zu täglicher Entspannung"
+          ],
+          "review_evidence": "'Meine Verspannungen haben sich gebessert!', 'hilft tatsächlich', 'Entspannung'",
+          "scene_type": "positive"
+        }
+      ]
+    },
+    "Offer": {
+      "description": "Angebote, Sets, Bundles — Preisvorteil kommunizieren",
+      "sub_angles": [
+        {
+          "name": "All-In Set Vorteil",
+          "hook_suggestions": [
+            "Komplett-Set für dein Wohlbefinden — spare über 25%",
+            "Alles was du brauchst in einem Set + gratis Fußroller",
+            "Das meistgekaufte Set bei styleholz"
+          ],
+          "review_evidence": "All-In Set ist der Hero — meistgekauftes Produkt. Gratis Fußroller ist starkes Incentive.",
+          "scene_type": "positive"
+        },
+        {
+          "name": "Leichte Beine Set",
+          "hook_suggestions": [
+            "Leichte Beine Set — speziell für müde, schwere Beine",
+            "Endlich wieder leichte Beine — mit diesem Set",
+            "Das Set gegen schwere Beine"
+          ],
+          "review_evidence": "Zweitstärkstes Set. Spricht direkt den Pain Point 'schwere Beine' an.",
+          "scene_type": "positive"
+        }
+      ]
+    },
+    "Education": {
+      "description": "Erklärt, wie das Produkt funktioniert oder warum Faszientraining wichtig ist",
+      "sub_angles": [
+        {
+          "name": "Was Faszien eigentlich sind",
+          "hook_suggestions": [
+            "Wusstest du, dass verklebte Faszien Schmerzen verursachen?",
+            "Faszien — das vergessene Gewebe, das deinen Alltag beeinflusst",
+            "Warum Faszientraining wichtiger ist als du denkst"
+          ],
+          "review_evidence": "Einige Kunden erwähnen, dass sie erst durch das Produkt verstanden haben, was Faszientraining bewirkt.",
+          "scene_type": "positive"
+        },
+        {
+          "name": "Rillung für Tiefenwirkung",
+          "hook_suggestions": [
+            "Die Rillung ist das Geheimnis — natürlicher Vibrationseffekt",
+            "Warum ein gerillter Stab besser wirkt als eine glatte Rolle",
+            "Tiefenwirkung durch Eschenholz-Rillung"
+          ],
+          "review_evidence": "'Sehr effektiv', 'Tiefenwirkung' — die gerillte Oberfläche wird als besonders wirkungsvoll beschrieben.",
+          "scene_type": "positive"
+        }
+      ]
+    }
+  }
+}
