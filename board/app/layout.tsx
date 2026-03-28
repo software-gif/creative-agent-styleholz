@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lora, Assistant } from "next/font/google";
 import "./globals.css";
 import { BrandProvider } from "@/lib/brand-context";
 import Header from "@/components/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const assistant = Assistant({
+  variable: "--font-assistant",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Creative Board",
-  description: "Multi-brand creative asset management",
+  title: "styleholz — Creative Board",
+  description: "Creative asset management for styleholz",
 };
 
 export default function RootLayout({
@@ -26,8 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="de"
+      className={`${lora.variable} ${assistant.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <BrandProvider>

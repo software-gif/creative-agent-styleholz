@@ -86,7 +86,7 @@ export default function Board() {
 
   if (brandLoading) {
     return (
-      <div className="flex items-center justify-center h-64 text-gray-400">
+      <div className="flex items-center justify-center h-64 text-muted">
         Laden...
       </div>
     );
@@ -94,7 +94,7 @@ export default function Board() {
 
   if (!brandId) {
     return (
-      <div className="flex flex-col items-center justify-center h-64 text-gray-400">
+      <div className="flex flex-col items-center justify-center h-64 text-muted">
         <p className="text-lg font-medium">Keine Brand konfiguriert</p>
         <p className="text-sm mt-1">
           Lege zuerst eine Brand in der Datenbank an.
@@ -104,16 +104,16 @@ export default function Board() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       {/* Filter Bar */}
-      <div className="sticky top-[57px] z-40 bg-white border-b border-gray-200 px-6 py-2 flex items-center justify-between">
-        <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">
+      <div className="sticky top-[57px] z-40 bg-surface border-b border-border px-6 py-2 flex items-center justify-between">
+        <span className="text-xs text-muted bg-background px-2 py-0.5 rounded">
           {doneCount} Creatives
         </span>
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="text-sm border border-gray-200 rounded-lg px-3 py-1.5 text-gray-600 focus:outline-none focus:border-amber-700"
+          className="text-sm border border-border rounded-lg px-3 py-1.5 text-accent focus:outline-none focus:border-primary"
         >
           <option value="all">Alle Angles</option>
           {angles.map((a) => (
@@ -128,11 +128,11 @@ export default function Board() {
       {/* Grid */}
       <main className="p-6">
         {loading ? (
-          <div className="flex items-center justify-center h-64 text-gray-400">
+          <div className="flex items-center justify-center h-64 text-muted">
             Laden...
           </div>
         ) : filtered.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-64 text-gray-400">
+          <div className="flex flex-col items-center justify-center h-64 text-muted">
             <p className="text-lg font-medium">Noch keine Creatives</p>
             <p className="text-sm mt-1">
               Generiere Ads per Claude Code — sie erscheinen hier automatisch.
@@ -153,7 +153,7 @@ export default function Board() {
                         <a
                           href={getImageUrl(creative)!}
                           download
-                          className="flex-1 text-center text-xs font-semibold bg-gray-900 text-white py-1.5 rounded-lg hover:bg-gray-700 transition-colors"
+                          className="flex-1 text-center text-xs font-semibold bg-primary text-white py-1.5 rounded-lg hover:bg-primary/80 transition-colors"
                         >
                           Download
                         </a>

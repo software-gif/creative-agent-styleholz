@@ -68,7 +68,7 @@ export default function CreativeCard({
 
   return (
     <div
-      className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+      className="bg-surface rounded-xl border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow"
       draggable={draggable}
       onDragStart={(e) => onDragStart?.(e, creative)}
     >
@@ -79,7 +79,7 @@ export default function CreativeCard({
       >
         {creative.status === "generating" ? (
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-10 h-10 border-3 border-amber-600 border-t-transparent rounded-full animate-spin" />
+            <div className="w-10 h-10 border-3 border-primary border-t-transparent rounded-full animate-spin" />
           </div>
         ) : imageUrl ? (
           <img
@@ -89,7 +89,7 @@ export default function CreativeCard({
             loading="lazy"
           />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center text-gray-300 text-sm">
+          <div className="absolute inset-0 flex items-center justify-center text-muted text-sm">
             Kein Bild
           </div>
         )}
@@ -105,11 +105,11 @@ export default function CreativeCard({
         >
           {ANGLE_EMOJI[creative.angle]} {creative.angle}
         </div>
-        <div className="text-sm font-semibold text-gray-900 mt-0.5 leading-tight">
+        <div className="text-sm font-semibold text-accent mt-0.5 leading-tight">
           {creative.sub_angle}
         </div>
         {creative.hook_text && (
-          <div className="text-xs text-gray-400 mt-1 italic line-clamp-2">
+          <div className="text-xs text-muted mt-1 italic line-clamp-2">
             {creative.hook_text}
           </div>
         )}
