@@ -1,6 +1,6 @@
 "use client";
 
-import { Creative, getImageUrl } from "./CreativeCard";
+import { Creative, getImageUrl, getDownloadUrl } from "./CreativeCard";
 
 type ImageOverlayProps = {
   creative: Creative | null;
@@ -50,10 +50,9 @@ export default function ImageOverlay({ creative, onClose }: ImageOverlayProps) {
                 </>
               )}
             </div>
-            {imageUrl && (
+            {getDownloadUrl(creative) && (
               <a
-                href={imageUrl}
-                download
+                href={getDownloadUrl(creative)!}
                 className="mt-3 flex items-center justify-center gap-1.5 text-sm font-semibold bg-white text-black py-2 rounded-lg hover:bg-white/90 transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">

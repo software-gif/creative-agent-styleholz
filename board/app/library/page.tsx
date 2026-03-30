@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useBrand } from "@/lib/brand-context";
-import CreativeCard, { Creative, getImageUrl } from "@/components/CreativeCard";
+import CreativeCard, { Creative, getImageUrl, getDownloadUrl } from "@/components/CreativeCard";
 import ImageOverlay from "@/components/ImageOverlay";
 import FolderSidebar from "@/components/FolderSidebar";
 
@@ -131,10 +131,9 @@ export default function Library() {
                 onDragStart={handleDragStart}
                 actions={
                   <>
-                    {getImageUrl(asset.creative) && (
+                    {getDownloadUrl(asset.creative) && (
                       <a
-                        href={getImageUrl(asset.creative)!}
-                        download
+                        href={getDownloadUrl(asset.creative)!}
                         className="flex-1 text-center text-xs font-semibold bg-primary text-white py-1.5 rounded-lg hover:bg-primary/80 transition-colors"
                       >
                         Download

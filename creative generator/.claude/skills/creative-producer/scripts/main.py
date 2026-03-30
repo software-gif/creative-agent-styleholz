@@ -324,10 +324,28 @@ SPELLING: All German text MUST be spelled correctly. Double-check every word. Co
     except Exception:
         pass
 
+    # Load Meta Creative Best Practices
+    meta_bp_text = ""
+    try:
+        bp_path = os.path.join(PROJECT_ROOT, "branding", "meta_creative_best_practices.json")
+        if os.path.exists(bp_path):
+            with open(bp_path) as bpf:
+                bp_data = json.load(bpf)
+            rules = bp_data.get("prompt_injection_rules", {})
+            always = rules.get("always_include", [])
+            creative_style = meta.get("creative_style", "on_brand")
+            style_rules = rules.get(f"for_{creative_style}", [])
+            all_rules = always + style_rules
+            if all_rules:
+                meta_bp_text = "\nMETA AD PERFORMANCE RULES (follow these for maximum ad performance):\n"
+                meta_bp_text += "\n".join(f"- {r}" for r in all_rules) + "\n"
+    except Exception:
+        pass
+
     prompt_text = f"""Generate a professional static advertisement image with the following exact specifications.
 
 FORMAT: {meta['format']} aspect ratio, {meta['resolution']['width']}x{meta['resolution']['height']} pixels.
-{product_detail_text}
+{product_detail_text}{meta_bp_text}
 STYLE: {gen_instructions['style_reference']}
 
 BACKGROUND:

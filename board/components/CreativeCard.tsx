@@ -52,6 +52,14 @@ export function getImageUrl(creative: Creative): string | null {
   return null;
 }
 
+export function getDownloadUrl(creative: Creative): string | null {
+  const imageUrl = getImageUrl(creative);
+  if (!imageUrl) return null;
+  const slug = creative.sub_angle.toLowerCase().replace(/\s+/g, "_").replace(/[^a-z0-9_]/g, "");
+  const filename = `${creative.angle}_${slug}_${creative.format.replace(":", "x")}.png`;
+  return `/api/download?url=${encodeURIComponent(imageUrl)}&filename=${encodeURIComponent(filename)}`;
+}
+
 type CreativeCardProps = {
   creative: Creative;
   onImageClick?: (creative: Creative) => void;

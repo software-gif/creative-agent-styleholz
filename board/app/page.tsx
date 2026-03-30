@@ -7,6 +7,7 @@ import CreativeCard, {
   Creative,
   ANGLE_EMOJI,
   getImageUrl,
+  getDownloadUrl,
 } from "@/components/CreativeCard";
 import ImageOverlay from "@/components/ImageOverlay";
 import SaveButton from "@/components/SaveButton";
@@ -219,10 +220,9 @@ export default function Board() {
                   creative.status === "done" && (
                     <>
                       <SaveButton creative={creative} />
-                      {getImageUrl(creative) && (
+                      {getDownloadUrl(creative) && (
                         <a
-                          href={getImageUrl(creative)!}
-                          download
+                          href={getDownloadUrl(creative)!}
                           className="flex-1 text-center text-xs font-semibold bg-primary text-white py-1.5 rounded-lg hover:bg-primary/80 transition-colors"
                         >
                           Download
