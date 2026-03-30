@@ -43,10 +43,10 @@
       "correct_usage_poses": [
         {
           "name": "Wade / Unterschenkel",
-          "body_part": "Wade / Unterschenkel",
+          "body_part": "Wade / Unterschenkel (MUSKEL, NICHT das Knie)",
           "position": "SITZEND auf Sofa, Stuhl oder Bank",
-          "description": "Person sitzt entspannt. Ein Bein ist leicht angehoben oder auf dem Sofa abgelegt. Beide Hände halten die dunklen Griffe. Der helle gerillte Mittelteil wird über die NACKTE Wade gerollt — von Knöchel Richtung Knie und zurück.",
-          "camera_angle": "Seitlich oder leicht von vorne, so dass man Hände, Stab und Bein sieht",
+          "description": "Person sitzt entspannt. Ein Bein ist leicht angehoben oder ausgestreckt. Beide Hände halten die dunklen Griffe. Der helle gerillte Mittelteil wird über den WADENMUSKEL gerollt — das ist die Rückseite des Unterschenkels ZWISCHEN Knöchel und Knie. NICHT auf dem Knie, NICHT auf dem Schienbein. Der Stab liegt auf dem weichen Muskelgewebe der Wade.",
+          "camera_angle": "Seitlich oder leicht von vorne, so dass man Hände, Stab und Wadenmuskel sieht",
           "reference_image": "products/images/faszienstab-woodstick-flex-gerillt/2.jpg"
         },
         {
@@ -87,7 +87,9 @@
           "Benutzung auf Kleidung — wird auf nackter Haut angewendet",
           "Falsche Proportionen — der Stab ist so lang wie ein Unterarm+Hand",
           "Erfundene Features — keine zusätzlichen Knöpfe, Bänder, Metallteile etc.",
-          "Rechtschreibfehler in deutschen Texten"
+          "Rechtschreibfehler in deutschen Texten",
+          "NIEMALS über das KNIE rollen — der Stab wird ÜBER DIE WADE (Unterschenkel-Muskel) oder ÜBER DEN OBERSCHENKEL (Quadrizeps/Beinrückseite) gerollt. Das Kniegelenk selbst wird NICHT behandelt. Der Stab muss auf einem MUSKEL liegen, nicht auf einem GELENK.",
+          "NIEMALS Stab direkt auf Knochen oder Gelenke anwenden — nur auf Muskeln/Faszien (Wade, Oberschenkel, Nacken, Schultern, Rückenmuskulatur)"
         ]
       }
     },
