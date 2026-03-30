@@ -1,0 +1,126 @@
+{
+  "_description": "Produktwissen für AI-Bildgenerierung. Wird automatisch in jeden Gemini-Prompt injiziert. QUELLE DER WAHRHEIT für Produktaussehen, Größe, Funktion und Anwendung.",
+  "_last_updated": "2026-03-30",
+  "_source": "https://styleholz.com + Produktbilder + Kick-Off mit Andre Frühwirth",
+
+  "products": {
+    "faszienstab-woodstick-flex-gerillt": {
+      "name": "Faszienstab Woodstick FLEX (Gerillt)",
+      "sku": "SH-003-NAT",
+      "price": "€59,45 (statt €69,95)",
+      "is_hero_product": true,
+
+      "appearance": {
+        "summary": "Ein 52cm langer, SCHLANKER Massagestab aus zwei verschiedenen Hölzern.",
+        "length": "52 cm",
+        "diameter": "ca. 3-4 cm — DÜNN, NICHT dick wie eine Nudelrolle",
+        "weight": "leicht, gut in der Hand",
+        "two_tone_wood": {
+          "handles": "DUNKLES Nussholz (dunkelbraun/walnut) — die beiden GRIFFE an den Enden, je ca. 8-10cm lang",
+          "middle": "HELLES Eschenholz (hellblond/creme) — der gerillte MITTELTEIL mit ca. 10-12 einzelnen Segmenten"
+        },
+        "grooves": "Der Mittelteil besteht aus ca. 10-12 einzelnen gerillten Segmenten. Jedes Segment hat deutliche Rillen/Kerben (wie kleine Zahnräder). Die Rillung erzeugt den Vibrationseffekt.",
+        "flex": "Der Stab ist BIEGSAM — er biegt sich leicht wenn man ihn auf den Körper drückt und passt sich Körperkonturen an.",
+        "branding": "Kleine 'styleholz — wood a feeling' Gravur auf einem Griff"
+      },
+
+      "size_references": {
+        "vs_arm": "Etwas kürzer als ein Unterarm + Hand zusammen",
+        "vs_hands": "Wenn jemand den Stab mit beiden Händen an den Griffen hält, sind die Hände ca. 35-40cm auseinander",
+        "vs_body": "Der Stab ist so lang dass er bequem über einen Oberschenkel oder eine Wade reicht"
+      },
+
+      "how_it_works": {
+        "principle": "Der Stab wird mit BEIDEN Händen an den dunklen Griffen gehalten und über die nackte Haut GEROLLT. Die gerillte Oberfläche erzeugt dabei einen natürlichen Vibrationseffekt, der Faszien löst und die Durchblutung fördert. Funktioniert selbst bei leichtem Druck.",
+        "grip": "IMMER beide Hände an den dunklen Nussholz-Griffen. Die Hände umfassen die Griffe fest. Der Druck wird über die Hände dosiert — leichter Druck für sanfte Massage, stärkerer Druck für Triggerpunkte.",
+        "motion": "ROLLEN — der Stab wird auf der Haut hin und her gerollt, NICHT gedrückt, NICHT geklopft, NICHT geschlagen. Die Rollbewegung geht entlang des Muskels/der Faszie.",
+        "surface_contact": "Der HELLE gerillte Mittelteil ist der Teil der die Haut berührt. Die dunklen Griffe werden NUR gehalten, nie auf die Haut gedrückt.",
+        "flex_in_action": "Wenn man den Stab z.B. auf den Oberschenkel drückt, biegt sich der Mittelteil leicht — er umschließt quasi den Körperteil teilweise. Das ist das FLEX-Feature.",
+        "duration": "5-10 Minuten pro Tag reichen aus.",
+        "gerillt_vs_glatt": "GERILLT (Bestseller): Punktuellerer, intensiverer Druck. Tiefgehender Effekt im Gewebe. GLATT: Sanfte, gleichmäßige Druckverteilung, ideal für Anfänger."
+      },
+
+      "correct_usage_poses": [
+        {
+          "name": "Wade / Unterschenkel",
+          "body_part": "Wade / Unterschenkel",
+          "position": "SITZEND auf Sofa, Stuhl oder Bank",
+          "description": "Person sitzt entspannt. Ein Bein ist leicht angehoben oder auf dem Sofa abgelegt. Beide Hände halten die dunklen Griffe. Der helle gerillte Mittelteil wird über die NACKTE Wade gerollt — von Knöchel Richtung Knie und zurück.",
+          "camera_angle": "Seitlich oder leicht von vorne, so dass man Hände, Stab und Bein sieht",
+          "reference_image": "products/images/faszienstab-woodstick-flex-gerillt/2.jpg"
+        },
+        {
+          "name": "Oberschenkel",
+          "body_part": "Oberschenkel",
+          "position": "SITZEND auf Sofa, Stuhl, Gartenbank",
+          "description": "Person sitzt. Der Stab liegt auf dem nackten Oberschenkel. Beide Hände halten die dunklen Griffe und rollen den Stab hin und her. Der Stab biegt sich dabei leicht um den Oberschenkel herum.",
+          "camera_angle": "Von vorne oder leicht seitlich",
+          "reference_image": "products/images/faszienstab-woodstick-flex-gerillt/2.jpg"
+        },
+        {
+          "name": "Nacken / Schultern",
+          "body_part": "Nacken und Schulterbereich",
+          "position": "SITZEND oder STEHEND",
+          "description": "Der Stab wird HINTER den Nacken gelegt. Eine Hand hält den linken Griff, die andere den rechten Griff. Die Arme sind dabei OBEN und NACH HINTEN angewinkelt. Der helle gerillte Mittelteil liegt auf dem Nacken/den Schultern. Der Stab wird hin und her gerollt.",
+          "camera_angle": "Von HINTEN oder seitlich-hinten — man sieht den Rücken/Nacken der Person und den Stab dahinter",
+          "reference_image": "products/images/faszienstab-woodstick-flex-gerillt/1.jpg"
+        }
+      ],
+
+      "ai_generation_rules": {
+        "must_match": [
+          "ZWEI verschiedene Holzfarben: dunkle Griffe + heller gerillter Mittelteil",
+          "SCHLANK — ca. 3-4cm Durchmesser, NICHT dick",
+          "Ca. 10-12 gerillte Segmente im Mittelteil",
+          "52cm Gesamtlänge — proportional zum menschlichen Arm",
+          "BEIDE Hände halten die dunklen Griffe",
+          "Wird auf NACKTER HAUT angewendet, NICHT auf Kleidung",
+          "Person SITZT (Sofa, Stuhl, Bank, Bett) — NICHT am Boden, NICHT stehend"
+        ],
+        "must_avoid": [
+          "Zu dick/groß — der Stab ist SCHLANK wie ein Besenstiel, NICHT wie eine Nudelrolle",
+          "Nur eine Holzfarbe — es MÜSSEN zwei verschiedene Farben sein",
+          "Glatte Oberfläche im Mittelteil — die Rillen/Kerben müssen deutlich sichtbar sein",
+          "Einhand-Benutzung — wird IMMER mit BEIDEN Händen benutzt",
+          "Drücken/Klopfen statt Rollen — der Stab wird GEROLLT",
+          "Person liegt am Boden wie bei einer Faszienrolle — das ist der GEGENSATZ zum Produkt",
+          "Benutzung auf Kleidung — wird auf nackter Haut angewendet",
+          "Falsche Proportionen — der Stab ist so lang wie ein Unterarm+Hand",
+          "Erfundene Features — keine zusätzlichen Knöpfe, Bänder, Metallteile etc.",
+          "Rechtschreibfehler in deutschen Texten"
+        ]
+      }
+    },
+
+    "fussmassage-roller-holz-fussreflexzone": {
+      "name": "Fußmassage-Roller",
+      "is_hero_product": false,
+      "labels": ["BESTSELLER"],
+      "price": "€35,95 (statt €44,95)",
+
+      "appearance": {
+        "summary": "Ein Fußroller aus Holz der auf dem Boden liegt. Die Füße werden darauf gestellt und hin und her gerollt.",
+        "material": "Eschenholz mit gerillter Oberfläche",
+        "size": "Ca. 25-30cm lang, passt unter einen Schreibtisch"
+      },
+
+      "how_it_works": {
+        "principle": "Der Roller liegt auf dem BODEN. Die Person stellt einen oder beide Füße darauf und rollt die Füße hin und her. Stimuliert Fußreflexzonen.",
+        "position": "Wird UNTER den Füßen benutzt — die Person SITZT am Schreibtisch, auf dem Sofa etc."
+      },
+
+      "ai_generation_rules": {
+        "must_match": [
+          "Roller liegt am BODEN unter den Füßen",
+          "Person SITZT (am Schreibtisch, auf Sofa)",
+          "Nackte Füße auf dem Roller"
+        ],
+        "must_avoid": [
+          "Roller in der Hand gehalten",
+          "Roller auf dem Tisch",
+          "Falsches Produkt — verwechsle nicht mit dem Faszienstab"
+        ]
+      }
+    }
+  }
+}

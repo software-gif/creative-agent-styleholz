@@ -235,49 +235,90 @@ def build_gemini_prompt(ad_prompt_json, product_image_path):
 
     logo_visible = brand_elements.get('logo', {}).get('visible', False)
 
-    # Load product details from brand.json for better product understanding
+    # Load product details from product_knowledge.json (primary) or brand.json (fallback)
     product_detail_text = ""
     try:
+        pk_path = os.path.join(PROJECT_ROOT, "branding", "product_knowledge.json")
         brand_path = os.path.join(PROJECT_ROOT, "branding", "brand.json")
-        if os.path.exists(brand_path):
+        if os.path.exists(pk_path):
+            with open(pk_path) as pf:
+                pk_data = json.load(pf)
+            product_details = pk_data.get("products", {})
+        elif os.path.exists(brand_path):
             with open(brand_path) as bf:
                 brand_data = json.load(bf)
             product_details = brand_data.get("product_details", {})
             # Try to match product from image path
             for handle, details in product_details.items():
                 if handle in product_image_path:
+                    # Support both product_knowledge.json and brand.json formats
+                    appearance = details.get('appearance', {})
                     how_it_works = details.get('how_it_works', {})
-                    usage_poses = details.get('usage_poses', [])
-                    usage_text = ""
-                    if usage_poses:
-                        pose_lines = []
-                        for pose in usage_poses:
-                            if isinstance(pose, dict):
-                                pose_lines.append(f"  - {pose['body_part']}: {pose['position']}")
-                            else:
-                                pose_lines.append(f"  - {pose}")
-                        usage_text = "\n".join(pose_lines)
+                    size_refs = details.get('size_references', {})
+                    ai_rules = details.get('ai_generation_rules', {})
+                    usage_poses = details.get('correct_usage_poses', details.get('usage_poses', []))
+
+                    # Build appearance text
+                    if isinstance(appearance, dict):
+                        app_text = appearance.get('summary', details.get('exact_appearance', ''))
+                        two_tone = appearance.get('two_tone_wood', {})
+                        if two_tone:
+                            app_text += f"\n  HANDLES: {two_tone.get('handles', '')}"
+                            app_text += f"\n  MIDDLE: {two_tone.get('middle', '')}"
+                        if appearance.get('grooves'):
+                            app_text += f"\n  GROOVES: {appearance['grooves']}"
+                        if appearance.get('flex'):
+                            app_text += f"\n  FLEX: {appearance['flex']}"
+                        dims = f"{appearance.get('length', '')} lang, {appearance.get('diameter', '')} Durchmesser"
+                    else:
+                        app_text = details.get('exact_appearance', '')
+                        dims = details.get('dimensions', '')
+
+                    # Build size reference
+                    size_text = ""
+                    if isinstance(size_refs, dict):
+                        for k, v in size_refs.items():
+                            size_text += f"\n  - {v}"
+                    else:
+                        size_text = details.get('size_reference', '')
+
+                    # Build usage poses
+                    pose_lines = []
+                    for pose in usage_poses:
+                        if isinstance(pose, dict):
+                            name = pose.get('name', pose.get('body_part', ''))
+                            desc = pose.get('description', pose.get('position', ''))
+                            pose_lines.append(f"  - {name}: {desc}")
+                    usage_text = "\n".join(pose_lines) if pose_lines else ""
+
+                    # Build must_avoid from ai_generation_rules or common_ai_mistakes
+                    mistakes = ai_rules.get('must_avoid', details.get('common_ai_mistakes', []))
+                    must_match = ai_rules.get('must_match', [])
 
                     product_detail_text = f"""
 CRITICAL PRODUCT REFERENCE — you MUST match this exactly:
-- Product: {details['name']}
-- Appearance: {details['exact_appearance']}
-- Dimensions: {details['dimensions']}
-- Size vs human: {details['size_reference']}
+- Product: {details.get('name', '')}
+- Appearance: {app_text}
+- Dimensions: {dims}
+- Size references: {size_text}
 
 HOW THE PRODUCT IS USED:
 - Principle: {how_it_works.get('principle', '')}
 - Grip: {how_it_works.get('grip', '')}
 - Motion: {how_it_works.get('motion', '')}
-- Flex: {how_it_works.get('flex_feature', '')}
+- Surface contact: {how_it_works.get('surface_contact', '')}
+- Flex in action: {how_it_works.get('flex_in_action', how_it_works.get('flex_feature', ''))}
 
 CORRECT USAGE POSES:
 {usage_text}
 
-COMMON AI MISTAKES TO AVOID:
-{chr(10).join('- ' + m for m in details.get('common_ai_mistakes', []))}
+MUST MATCH (mandatory product features):
+{chr(10).join('- ' + m for m in must_match)}
 
-SPELLING: All German text MUST be spelled correctly. Double-check every word. Common correct spellings: Faszientraining, Verspannungen, Entspannung, Wohlbefinden, Fußroller, österreichischem, Eschenholz, Handgefertigt.
+COMMON AI MISTAKES TO AVOID:
+{chr(10).join('- ' + m for m in mistakes)}
+
+SPELLING: All German text MUST be spelled correctly. Double-check every word. Common correct spellings: Faszientraining, Verspannungen, Entspannung, Wohlbefinden, Fußroller, österreichischem, Eschenholz, Handgefertigt, gelöst, Österreich, Körper, für, über, natürlich.
 """
                     break
     except Exception:
