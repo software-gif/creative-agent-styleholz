@@ -246,13 +246,38 @@ def build_gemini_prompt(ad_prompt_json, product_image_path):
             # Try to match product from image path
             for handle, details in product_details.items():
                 if handle in product_image_path:
+                    how_it_works = details.get('how_it_works', {})
+                    usage_poses = details.get('usage_poses', [])
+                    usage_text = ""
+                    if usage_poses:
+                        pose_lines = []
+                        for pose in usage_poses:
+                            if isinstance(pose, dict):
+                                pose_lines.append(f"  - {pose['body_part']}: {pose['position']}")
+                            else:
+                                pose_lines.append(f"  - {pose}")
+                        usage_text = "\n".join(pose_lines)
+
                     product_detail_text = f"""
 CRITICAL PRODUCT REFERENCE — you MUST match this exactly:
 - Product: {details['name']}
 - Appearance: {details['exact_appearance']}
 - Dimensions: {details['dimensions']}
 - Size vs human: {details['size_reference']}
-- COMMON AI MISTAKES TO AVOID: {'; '.join(details.get('common_ai_mistakes', []))}
+
+HOW THE PRODUCT IS USED:
+- Principle: {how_it_works.get('principle', '')}
+- Grip: {how_it_works.get('grip', '')}
+- Motion: {how_it_works.get('motion', '')}
+- Flex: {how_it_works.get('flex_feature', '')}
+
+CORRECT USAGE POSES:
+{usage_text}
+
+COMMON AI MISTAKES TO AVOID:
+{chr(10).join('- ' + m for m in details.get('common_ai_mistakes', []))}
+
+SPELLING: All German text MUST be spelled correctly. Double-check every word. Common correct spellings: Faszientraining, Verspannungen, Entspannung, Wohlbefinden, Fußroller, österreichischem, Eschenholz, Handgefertigt.
 """
                     break
     except Exception:

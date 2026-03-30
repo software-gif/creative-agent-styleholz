@@ -286,18 +286,45 @@
       "exact_appearance": "Ein 52cm langer, schlanker Massagestab aus Holz. WICHTIG: Der Stab hat ZWEI verschiedene Holzfarben: Die beiden GRIFFE an den Enden sind aus DUNKLEM Nussholz (dunkelbraun). Der MITTELTEIL hat ca. 10-12 gerillte/geriffelteSegmente aus HELLEM Eschenholz (hellblond/creme). Der Stab ist DÜNN — ca. 3-4cm Durchmesser, NICHT dick wie eine Nudelrolle. Der Stab ist BIEGSAM und passt sich Körperkonturen an.",
       "dimensions": "52cm Länge, ca. 3-4cm Durchmesser",
       "size_reference": "Etwas kürzer als ein Unterarm + Hand. Wenn jemand den Stab mit beiden Händen an den Griffen hält, sind die Hände ca. 40cm auseinander.",
+      "how_it_works": {
+        "principle": "Der Stab wird mit BEIDEN Händen an den dunklen Griffen gehalten und über die Haut GEROLLT. Die gerillte Oberfläche erzeugt einen natürlichen Vibrationseffekt, der Faszien löst und die Durchblutung fördert. Funktioniert selbst bei leichtem Druck.",
+        "grip": "IMMER beide Hände an den dunklen Nussholz-Griffen. Die Hände umfassen die Griffe wie bei einem Nudelholz. Der Druck wird über die Hände dosiert.",
+        "motion": "Der Stab wird AUF der Haut hin und her GEROLLT — NICHT gedrückt oder geklopft. Die Rollbewegung geht immer ENTLANG des Muskels/der Faszie.",
+        "flex_feature": "Der Stab ist biegsam und passt sich Körperkonturen an. Wenn man ihn auf den Oberschenkel drückt, biegt er sich leicht — das ist das FLEX-Feature.",
+        "variants": "Es gibt 'Glatt' (sanfte Druckverteilung, für Anfänger) und 'Gerillt' (Bestseller, intensiverer punktueller Druck, tiefgehender Effekt)."
+      },
       "usage_poses": [
-        "Mit beiden Händen an den dunklen Griffen halten und über die Wade rollen (sitzend)",
-        "Über den Oberschenkel rollen (sitzend auf Sofa/Stuhl)",
-        "Im Nacken/Schulterbereich anwenden (eine Hand vorne, eine hinten)",
-        "Der Stab biegt sich leicht beim Andrücken auf die Haut"
+        {
+          "body_part": "Wade/Unterschenkel",
+          "position": "SITZEND auf Sofa oder Stuhl. Bein angewinkelt oder ausgestreckt. Stab mit beiden Händen an den Griffen halten und über die nackte Wade rollen. Von oben nach unten und zurück.",
+          "detail": "Häufigste Anwendungspose. Frau sitzt entspannt, ein Bein leicht angehoben oder auf dem Sofa abgelegt."
+        },
+        {
+          "body_part": "Oberschenkel",
+          "position": "SITZEND. Stab auf dem nackten Oberschenkel platzieren, mit beiden Händen an den Griffen hin und her rollen. Der Stab biegt sich dabei leicht um den Oberschenkel.",
+          "detail": "Wie auf dem Website-Bild: Frau sitzt auf Gartenbank, rollt über den Oberschenkel."
+        },
+        {
+          "body_part": "Nacken/Schultern",
+          "position": "SITZEND oder STEHEND. Stab HINTER den Nacken legen, eine Hand links, eine Hand rechts am Griff. Dann hin und her rollen über den Nackenbereich. Arme sind dabei OBEN/HINTEN.",
+          "detail": "Wie auf dem Website-Bild: Frau von hinten, Stab liegt im Nacken, beide Hände halten die Griffe seitlich am Kopf. Arme sind nach oben/hinten angewinkelt."
+        },
+        {
+          "body_part": "Rücken",
+          "position": "SITZEND. Stab hinter den Rücken nehmen und über den unteren Rücken rollen. Ähnlich wie Nacken, aber tiefer.",
+          "detail": "Schwieriger darzustellen. Besser Wade oder Oberschenkel für Ads nehmen."
+        }
       ],
       "common_ai_mistakes": [
-        "FALSCH: Zu dick/groß dargestellt — der Stab ist SCHLANK",
-        "FALSCH: Nur eine Holzfarbe — es MÜSSEN zwei Farben sein (dunkle Griffe, helle Rillung)",
-        "FALSCH: Zu viele oder zu wenige Rillen — es sind ca. 10-12 Segmente",
-        "FALSCH: Glatte Oberfläche — die Segmente haben deutliche RILLEN/KERBEN",
-        "FALSCH: Wie eine Nudelrolle oder ein Baseballschläger — es ist ein SCHLANKER, BIEGSAMER Stab"
+        "FALSCH: Zu dick/groß dargestellt — der Stab ist SCHLANK (3-4cm Durchmesser), NICHT wie eine Nudelrolle",
+        "FALSCH: Nur eine Holzfarbe — es MÜSSEN zwei Farben sein (DUNKLE Nussholz-Griffe + HELLE Eschenholz-Rillung)",
+        "FALSCH: Zu viele oder zu wenige Rillen — es sind ca. 10-12 gerillte Segmente",
+        "FALSCH: Glatte Oberfläche — die Segmente haben deutliche RILLEN/KERBEN (wie Zahnräder)",
+        "FALSCH: Stab wird mit einer Hand benutzt — er wird IMMER mit BEIDEN Händen an den Griffen gehalten",
+        "FALSCH: Stab wird wie ein Stock benutzt (drücken/klopfen) — er wird GEROLLT über die Haut",
+        "FALSCH: Person liegt am Boden — die Person SITZT immer (Sofa, Stuhl, Bank, Bett)",
+        "FALSCH: Stab wird auf Kleidung benutzt — er wird auf NACKTER HAUT angewendet",
+        "FALSCH: Rechtschreibfehler im Text — alle deutschen Texte müssen fehlerfrei sein"
       ]
     }
   },
