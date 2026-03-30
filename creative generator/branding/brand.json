@@ -280,6 +280,27 @@
       "KEINE jungen/sportlichen Models — Zielgruppe ist 40-55"
     ]
   },
+  "product_details": {
+    "faszienstab-woodstick-flex-gerillt": {
+      "name": "Faszienstab Woodstick FLEX",
+      "exact_appearance": "Ein 52cm langer, schlanker Massagestab aus Holz. WICHTIG: Der Stab hat ZWEI verschiedene Holzfarben: Die beiden GRIFFE an den Enden sind aus DUNKLEM Nussholz (dunkelbraun). Der MITTELTEIL hat ca. 10-12 gerillte/geriffelteSegmente aus HELLEM Eschenholz (hellblond/creme). Der Stab ist DÜNN — ca. 3-4cm Durchmesser, NICHT dick wie eine Nudelrolle. Der Stab ist BIEGSAM und passt sich Körperkonturen an.",
+      "dimensions": "52cm Länge, ca. 3-4cm Durchmesser",
+      "size_reference": "Etwas kürzer als ein Unterarm + Hand. Wenn jemand den Stab mit beiden Händen an den Griffen hält, sind die Hände ca. 40cm auseinander.",
+      "usage_poses": [
+        "Mit beiden Händen an den dunklen Griffen halten und über die Wade rollen (sitzend)",
+        "Über den Oberschenkel rollen (sitzend auf Sofa/Stuhl)",
+        "Im Nacken/Schulterbereich anwenden (eine Hand vorne, eine hinten)",
+        "Der Stab biegt sich leicht beim Andrücken auf die Haut"
+      ],
+      "common_ai_mistakes": [
+        "FALSCH: Zu dick/groß dargestellt — der Stab ist SCHLANK",
+        "FALSCH: Nur eine Holzfarbe — es MÜSSEN zwei Farben sein (dunkle Griffe, helle Rillung)",
+        "FALSCH: Zu viele oder zu wenige Rillen — es sind ca. 10-12 Segmente",
+        "FALSCH: Glatte Oberfläche — die Segmente haben deutliche RILLEN/KERBEN",
+        "FALSCH: Wie eine Nudelrolle oder ein Baseballschläger — es ist ein SCHLANKER, BIEGSAMER Stab"
+      ]
+    }
+  },
   "priority_products": {
     "hero": "faszienstab-woodstick-flex-gerillt",
     "sets": ["faszientraining-komplett-set", "faszientraining-starter-set-gerillt"],

@@ -235,10 +235,33 @@ def build_gemini_prompt(ad_prompt_json, product_image_path):
 
     logo_visible = brand_elements.get('logo', {}).get('visible', False)
 
+    # Load product details from brand.json for better product understanding
+    product_detail_text = ""
+    try:
+        brand_path = os.path.join(PROJECT_ROOT, "branding", "brand.json")
+        if os.path.exists(brand_path):
+            with open(brand_path) as bf:
+                brand_data = json.load(bf)
+            product_details = brand_data.get("product_details", {})
+            # Try to match product from image path
+            for handle, details in product_details.items():
+                if handle in product_image_path:
+                    product_detail_text = f"""
+CRITICAL PRODUCT REFERENCE — you MUST match this exactly:
+- Product: {details['name']}
+- Appearance: {details['exact_appearance']}
+- Dimensions: {details['dimensions']}
+- Size vs human: {details['size_reference']}
+- COMMON AI MISTAKES TO AVOID: {'; '.join(details.get('common_ai_mistakes', []))}
+"""
+                    break
+    except Exception:
+        pass
+
     prompt_text = f"""Generate a professional static advertisement image with the following exact specifications.
 
 FORMAT: {meta['format']} aspect ratio, {meta['resolution']['width']}x{meta['resolution']['height']} pixels.
-
+{product_detail_text}
 STYLE: {gen_instructions['style_reference']}
 
 BACKGROUND:
@@ -310,7 +333,10 @@ IMPORTANT: This is a NEGATIVE/PROBLEM scene. Do NOT show the advertised product.
             prompt_text += f"- Decorative elements: {', '.join(elements)}\n"
 
     prompt_text += "\nTEXT OVERLAYS (render ONLY the text content below — correct German spelling, clean typography):\n"
-    prompt_text += "CRITICAL: Only render the actual text content. Do NOT render any font names, sizes, colors, CSS values, or technical specifications as visible text in the image.\n"
+    prompt_text += "CRITICAL RULES FOR TEXT:\n"
+    prompt_text += "1. Only render the actual text content provided below. Do NOT render font names, sizes, colors, CSS values, or technical specifications.\n"
+    prompt_text += "2. Render each text EXACTLY ONCE. Do NOT duplicate any text line. If you see 'Dieser Holzstab hat alles verändert', render it ONE time only.\n"
+    prompt_text += "3. Use correct German characters: ä, ö, ü, ß — NOT ae, oe, ue.\n"
     for i, overlay in enumerate(text_overlays, 1):
         style = overlay['style']
         font_desc = style['font_family']
