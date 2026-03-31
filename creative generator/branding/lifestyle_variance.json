@@ -110,7 +110,11 @@
     "comfortable cotton shorts and a soft white t-shirt, bare legs",
     "a light summer dress above the knee, bare arms and legs",
     "casual denim shorts and a loose linen blouse, bare legs",
-    "yoga shorts and a simple sleeveless top, bare legs and shoulders",
-    "light cotton lounge shorts and a fitted tank top, bare legs and arms"
-  ]
+    "thin light yoga pants and a simple sleeveless top, bare shoulders",
+    "light cotton lounge shorts and a fitted tank top, bare legs and arms",
+    "a thin flowy midi skirt and a sleeveless top, bare arms and calves",
+    "light leggings and a thin summer tank top, bare arms and shoulders"
+  ],
+
+  "_outfit_rules": "Dünne/leichte Kleidung ist OK (dünne Leggings, leichte Stoffe). KEINE dicken Pullover, Jacken, Winterkleidung, Jeans. Haut muss an der Anwendungsstelle SICHTBAR sein. Bei Bein-Posen: Shorts oder dünne Leggings. Bei Nacken-Posen: ärmelloses Top."
 }
