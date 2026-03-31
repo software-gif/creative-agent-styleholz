@@ -35,25 +35,40 @@
   ],
 
   "poses": {
-    "oberschenkel_sitzend": {
-      "description": "Auf Sofa/Stuhl sitzend, Stab auf OBEREM Oberschenkel (weit über dem Knie)",
-      "prompt_snippet": "sitting on {setting_furniture}, rolling the wooden stick on her UPPER THIGH muscle (midway between hip and knee, well ABOVE the knee). Both hands grip the dark walnut handles. Bare legs in summer shorts.",
-      "body_parts_visible": "bare thighs, hands on dark handles, relaxed sitting position"
+    "oberschenkel_vorne": {
+      "description": "Sitzend, Stab auf der VORDERSEITE des Oberschenkels (Quadrizeps), weit über dem Knie",
+      "prompt_snippet": "sitting on {setting_furniture}, rolling the wooden stick on the FRONT of her UPPER THIGH (quadriceps muscle, midway between hip and knee, well ABOVE the knee). Both hands grip the dark walnut handles firmly. Bare legs in shorts. Looking down at the product.",
+      "body_parts_visible": "bare upper thighs, hands on dark handles"
     },
-    "wade_sitzend": {
-      "description": "Sitzend, ein Bein angewinkelt, Stab auf der WADE (Rückseite Unterschenkel)",
-      "prompt_snippet": "sitting on {setting_furniture}, one leg slightly raised. Rolling the wooden stick on her bare CALF MUSCLE (back of lower leg, between ankle and knee). Both hands grip the dark walnut handles.",
-      "body_parts_visible": "bare calves, hands on dark handles, relaxed sitting"
+    "oberschenkel_aussen": {
+      "description": "Sitzend, Stab auf der AUSSENSEITE des Oberschenkels (IT-Band)",
+      "prompt_snippet": "sitting on {setting_furniture}, rolling the wooden stick along the OUTSIDE of her thigh (IT band area). Both hands grip the dark walnut handles. Legs slightly turned to show the outer thigh. Bare legs. Relaxed expression.",
+      "body_parts_visible": "bare outer thigh, side angle, hands on dark handles"
     },
-    "nacken_von_hinten": {
-      "description": "Von hinten gesehen, Stab im Nacken, Arme oben angewinkelt",
-      "prompt_snippet": "seen from BEHIND. She holds the wooden stick behind her neck — left hand on left dark handle, right hand on right dark handle. Arms raised and angled behind her head. The light grooved middle section rests against her bare neck/upper back. Wearing a sleeveless top showing bare shoulders.",
-      "body_parts_visible": "back of neck, bare shoulders, arms raised"
+    "wade_hochgelegt": {
+      "description": "Sitzend, ein Bein auf dem Sofa ausgestreckt, Stab auf der WADE",
+      "prompt_snippet": "sitting on {setting_furniture} with one leg stretched out on the cushion. Rolling the wooden stick on her bare CALF MUSCLE (back of lower leg). Both hands grip the dark walnut handles. Relaxed, comfortable pose.",
+      "body_parts_visible": "bare calves stretched out, hands on dark handles"
+    },
+    "nacken_dutt": {
+      "description": "Von hinten, Stab im Nacken, HAARE HOCHGESTECKT (Dutt/Zopf) damit der Nacken frei ist",
+      "prompt_snippet": "seen from BEHIND. Hair is UP in a bun or updo — the NECK IS FULLY EXPOSED and free of hair. She holds the wooden stick behind her bare neck — left hand on left dark handle, right hand on right dark handle. Arms raised. The light grooved middle section rolls directly on her bare neck skin. Wearing a sleeveless top showing bare shoulders. CRITICAL: hair must be UP, neck must be BARE.",
+      "body_parts_visible": "bare neck (no hair covering it), bare shoulders, arms raised, hair in bun"
     },
     "schulter_seitlich": {
-      "description": "Seitlich gesehen, Stab auf der Schulter/oberem Rücken",
-      "prompt_snippet": "seen from the SIDE. She uses the wooden stick on her bare SHOULDER, rolling it along the trapezius muscle. One hand on each dark handle. Wearing a tank top. Head slightly tilted in relaxation.",
+      "description": "Seitlich gesehen, Stab auf der Schulter/Trapezmuskel",
+      "prompt_snippet": "seen from the SIDE. She uses the wooden stick on her bare SHOULDER/TRAPEZIUS muscle. One hand on each dark handle. Wearing a tank top showing bare shoulders and upper arms. Head gently tilted away from the stick in relaxation.",
       "body_parts_visible": "bare shoulder, side profile, relaxed head tilt"
+    },
+    "unterarm_nahaufnahme": {
+      "description": "Nahaufnahme: Stab auf dem UNTERARM, zeigt die Holz-auf-Haut Interaktion",
+      "prompt_snippet": "CLOSE-UP shot of the wooden stick being rolled along her bare FOREARM. Both hands visible — one holding a dark handle, the other guiding. The grooved wood texture is clearly visible pressing gently into the skin. Warm intimate detail shot.",
+      "body_parts_visible": "bare forearm, hands on dark handles, wood grain visible on skin"
+    },
+    "oberschenkel_rueckseite": {
+      "description": "Sitzend auf Stuhlkante, Stab auf der RÜCKSEITE des Oberschenkels (Hamstring)",
+      "prompt_snippet": "sitting on the edge of {setting_furniture}, leaning slightly forward. Rolling the wooden stick on the BACK of her thigh (hamstring muscle). Both hands grip the dark walnut handles from underneath. Bare legs. Slightly different angle — viewed from the side.",
+      "body_parts_visible": "bare back of thigh, side view, hands underneath"
     }
   },
 

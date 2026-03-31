@@ -234,6 +234,12 @@ def inject_lifestyle_variance(ad_prompt_json):
     model = random.choice(lv.get("models", []))
     model_text = model.get("prompt_snippet", "")
 
+    # Pick random pose
+    poses = lv.get("poses", {})
+    pose_key = random.choice(list(poses.keys()))
+    pose = poses[pose_key]
+    pose_text = pose.get("prompt_snippet", "")
+
     # Pick random outfit
     outfits = lv.get("outfits_summer", [])
     outfit = random.choice(outfits) if outfits else ""
@@ -247,15 +253,20 @@ def inject_lifestyle_variance(ad_prompt_json):
     setting_key = random.choice(env_settings)
     setting = settings[setting_key]
     setting_text = setting.get("prompt_snippet", "")
+    furniture = setting.get("furniture", "a sofa")
+
+    # Replace {setting_furniture} placeholder in pose
+    pose_text = pose_text.replace("{setting_furniture}", furniture)
 
     variance_text = f"""
-LIFESTYLE VARIANCE (use these specific details for this creative):
+LIFESTYLE VARIANCE (use these SPECIFIC details for this creative — make it UNIQUE):
 - MODEL: {model_text}
+- POSE: {pose_text}
 - OUTFIT: {outfit}
 - SETTING: {setting_text}
-- IMPORTANT: Make this person look UNIQUE and DIFFERENT from other creatives. Vary hair, face, body type, expression.
+- IMPORTANT: Make this person look UNIQUE and DIFFERENT from other creatives. Vary hair, face, body type, expression, pose.
 """
-    print(f"  Variance: {model.get('id', '?')}, {setting_key}, {outfit[:30]}...")
+    print(f"  Variance: {model.get('id', '?')}, {pose_key}, {setting_key}, {outfit[:30]}...")
     return variance_text
 
 
