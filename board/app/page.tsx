@@ -22,6 +22,7 @@ export default function Board() {
   const [seasonFilter, setSeasonFilter] = useState("all");
   const [envFilter, setEnvFilter] = useState("all");
   const [productCatFilter, setProductCatFilter] = useState("all");
+  const [formatFilter, setFormatFilter] = useState("all");
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<Creative | null>(null);
 
@@ -93,7 +94,8 @@ export default function Board() {
     .filter((c) => typeFilter === "all" || c.creative_type === typeFilter)
     .filter((c) => seasonFilter === "all" || c.season === seasonFilter)
     .filter((c) => envFilter === "all" || c.environment === envFilter)
-    .filter((c) => productCatFilter === "all" || c.product_category === productCatFilter);
+    .filter((c) => productCatFilter === "all" || c.product_category === productCatFilter)
+    .filter((c) => formatFilter === "all" || c.format === formatFilter);
   const doneCount = creatives.filter((c) => c.status === "done").length;
   const generatingCount = creatives.filter((c) => c.status === "generating").length;
 
@@ -134,6 +136,20 @@ export default function Board() {
             )}
           </div>
           <div className="flex items-center gap-2 flex-wrap justify-end">
+            {/* Format toggle */}
+            <div className="flex items-center bg-background rounded-lg p-0.5 gap-0.5">
+              {(["all", "4:5", "9:16"] as const).map((fmt) => (
+                <button
+                  key={fmt}
+                  onClick={() => setFormatFilter(fmt)}
+                  className={`text-[11px] font-medium px-2 py-1 rounded-md transition-all ${
+                    formatFilter === fmt ? "bg-surface text-primary shadow-sm" : "text-muted hover:text-accent"
+                  }`}
+                >
+                  {fmt === "all" ? "Alle" : fmt === "4:5" ? "Feed" : "Story"}
+                </button>
+              ))}
+            </div>
             {/* Type toggle */}
             <div className="flex items-center bg-background rounded-lg p-0.5 gap-0.5">
               {(["all", "lifestyle", "product_static"] as const).map((type) => (
