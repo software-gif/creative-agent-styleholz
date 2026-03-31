@@ -189,6 +189,8 @@ export default function Board() {
                 <option value="all_in_set">All-In Set</option>
                 <option value="starter_set">Starter-Set</option>
                 <option value="leichte_beine_set">Leichte Beine Set</option>
+                <option value="reise_set">Gute Reise Set</option>
+                <option value="duo_pack">Duo Pack</option>
               </optgroup>
               <optgroup label="Sprays">
                 <option value="muskel_aktiv">Muskel-Aktiv</option>
