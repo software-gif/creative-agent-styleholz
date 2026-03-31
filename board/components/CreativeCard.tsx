@@ -138,43 +138,34 @@ export default function CreativeCard({
             {creative.format}
           </span>
         </div>
-        <div className="absolute top-2 left-2 flex flex-col gap-1">
-          <div className="flex gap-1">
-            {creative.creative_style === "off_brand" && (
-              <span className="bg-orange-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded shadow-sm">
-                OFF
-              </span>
-            )}
-            {creative.season && creative.season !== "evergreen" && (
-              <span className="bg-accent/80 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded shadow-sm capitalize">
-                {creative.season}
-              </span>
-            )}
-          </div>
-          <div className="flex gap-1">
-            {creative.product_category && (
-              <span className="bg-black/50 backdrop-blur-sm text-white text-[9px] font-medium px-1.5 py-0.5 rounded shadow-sm capitalize">
-                {creative.product_category}
-              </span>
-            )}
-            {creative.environment && (
-              <span className="bg-primary/70 backdrop-blur-sm text-white text-[9px] font-medium px-1.5 py-0.5 rounded shadow-sm capitalize">
-                {creative.environment}
-              </span>
-            )}
-          </div>
-        </div>
+        {creative.creative_style === "off_brand" && (
+          <span className="absolute top-2 left-2 bg-orange-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded shadow-sm">
+            OFF
+          </span>
+        )}
       </div>
 
       {/* Meta */}
       <div className="p-3">
-        <div className="flex items-center gap-1.5">
-          <span className="text-sm">{ANGLE_EMOJI[creative.angle]}</span>
-          <span
-            className={`text-[11px] font-semibold uppercase tracking-wide ${ANGLE_COLORS[creative.angle] || "text-gray-500"}`}
-          >
-            {creative.angle}
-          </span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1.5">
+            <span className="text-sm">{ANGLE_EMOJI[creative.angle]}</span>
+            <span className={`text-[11px] font-semibold uppercase tracking-wide ${ANGLE_COLORS[creative.angle] || "text-gray-500"}`}>
+              {creative.angle}
+            </span>
+          </div>
+          <div className="flex items-center gap-1">
+            {creative.product_category && (
+              <span className="text-[9px] font-medium text-muted bg-background px-1.5 py-0.5 rounded capitalize">
+                {creative.product_category}
+              </span>
+            )}
+            {creative.environment && (
+              <span className="text-[9px] font-medium text-primary bg-primary/10 px-1.5 py-0.5 rounded capitalize">
+                {creative.environment}
+              </span>
+            )}
+          </div>
         </div>
         <div className="text-[13px] font-semibold text-accent mt-1 leading-snug">
           {creative.sub_angle}
