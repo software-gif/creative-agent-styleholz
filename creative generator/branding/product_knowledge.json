@@ -11,17 +11,27 @@
       "is_hero_product": true,
 
       "appearance": {
-        "summary": "Ein 52cm langer, SCHLANKER Massagestab aus zwei verschiedenen Hölzern.",
-        "length": "52 cm",
-        "diameter": "ca. 3-4 cm — DÜNN, NICHT dick wie eine Nudelrolle",
+        "summary": "Ein 52cm langer, SCHLANKER Massagestab aus zwei VERSCHIEDENFARBIGEN Hölzern. KRITISCH: Der Stab hat IMMER zwei deutlich unterschiedliche Farben — dunkle Enden und helle Mitte.",
+        "length": "52 cm Gesamtlänge",
+        "diameter": "ca. 3-4 cm Durchmesser — so dick wie ein Besenstiel oder ein Daumen. NICHT dick wie eine Nudelrolle, Flasche oder Dose.",
+        "proportions": {
+          "total_length_cm": 52,
+          "handle_length_cm": "je ca. 10cm pro Griff (ca. 20% der Gesamtlänge pro Seite)",
+          "middle_length_cm": "ca. 32cm gerillter Mittelteil (ca. 60% der Gesamtlänge)",
+          "ratio_description": "Wenn man den Stab in 5 gleiche Teile teilt: 1 Teil = linker dunkler Griff, 3 Teile = heller gerillter Mittelteil, 1 Teil = rechter dunkler Griff.",
+          "thickness_vs_hand": "Der Stab ist so dick wie eine Frauenhand umschließen kann. Die Finger umgreifen den Griff vollständig.",
+          "vs_human_arm": "Der Stab ist etwas kürzer als ein ausgestreckter Unterarm (Ellbogen bis Fingerspitzen). Er ist DEUTLICH dünner als ein Unterarm."
+        },
         "weight": "leicht, gut in der Hand",
         "two_tone_wood": {
-          "handles": "DUNKLES Nussholz (dunkelbraun/walnut) — die beiden GRIFFE an den Enden, je ca. 8-10cm lang",
-          "middle": "HELLES Eschenholz (hellblond/creme) — der gerillte MITTELTEIL mit ca. 10-12 einzelnen Segmenten"
+          "critical": "MUSS IMMER zwei deutlich verschiedene Holzfarben haben — das ist DAS erkennbare Merkmal des Produkts!",
+          "handles": "DUNKLES Nussholz (dunkelbraun/walnut/schokoladenbraun) — die beiden GRIFFE an den Enden, je ca. 10cm lang. Glatte Oberfläche, runde Enden.",
+          "middle": "HELLES Eschenholz (hellblond/creme/honigfarben) — der gerillte MITTELTEIL mit ca. 10-12 einzelnen Segmenten. DEUTLICH HELLER als die Griffe.",
+          "contrast": "Der Farbkontrast zwischen dunklen Griffen und hellem Mittelteil muss DEUTLICH SICHTBAR sein. Das ist wie bei einem Bleistift: dunkles Ende, heller Schaft, dunkles Ende."
         },
-        "grooves": "Der Mittelteil besteht aus ca. 10-12 einzelnen gerillten Segmenten. Jedes Segment hat deutliche Rillen/Kerben (wie kleine Zahnräder). Die Rillung erzeugt den Vibrationseffekt.",
-        "flex": "Der Stab ist BIEGSAM — er biegt sich leicht wenn man ihn auf den Körper drückt und passt sich Körperkonturen an.",
-        "branding": "Kleine 'styleholz — wood a feeling' Gravur auf dem RECHTEN dunklen Nussholz-Griff (wenn der Stab horizontal liegt, Griffe links und rechts). Die Gravur ist dezent, hellbraun auf dunkelbraun, kaum sichtbar. AI sollte die Gravur NICHT betonen oder erfinden — sie ist zu klein um sie in generierten Bildern korrekt darzustellen. Besser: Gravur in AI-Bildern WEGLASSEN als sie falsch darzustellen."
+        "grooves": "Der Mittelteil besteht aus ca. 10-12 einzelnen gerillten Segmenten. Jedes Segment ist ein kurzes zylindrisches Stück mit umlaufenden Rillen/Kerben. Die Segmente sind NICHT glatt — sie haben eine deutliche Zahnrad-artige Textur.",
+        "flex": "Der Stab ist BIEGSAM — er biegt sich leicht wenn man ihn auf den Körper drückt. Die Segmente haben minimal Spiel zwischen sich.",
+        "branding": "Kleine 'styleholz — wood a feeling' Gravur auf dem RECHTEN dunklen Griff. In AI-Bildern: Die Gravur ist so klein dass sie schwer korrekt darzustellen ist. WEGLASSEN ist besser als eine falsche Gravur."
       },
 
       "size_references": {
@@ -69,13 +79,14 @@
 
       "ai_generation_rules": {
         "must_match": [
-          "ZWEI verschiedene Holzfarben: dunkle Griffe + heller gerillter Mittelteil",
-          "SCHLANK — ca. 3-4cm Durchmesser, NICHT dick",
-          "Ca. 10-12 gerillte Segmente im Mittelteil",
-          "52cm Gesamtlänge — proportional zum menschlichen Arm",
-          "BEIDE Hände halten die dunklen Griffe",
-          "Wird auf NACKTER HAUT angewendet, NICHT auf Kleidung",
-          "Person SITZT (Sofa, Stuhl, Bank, Bett) — NICHT am Boden, NICHT stehend"
+          "ZWEI DEUTLICH VERSCHIEDENE Holzfarben: DUNKLE schokoladenbraune Griffe an beiden Enden + HELLER honigfarbener/cremer gerillter Mittelteil. Der Farbunterschied muss OFFENSICHTLICH sein.",
+          "PROPORTIONEN: 1/5 dunkler Griff links — 3/5 heller gerillter Mittelteil — 1/5 dunkler Griff rechts. Der helle Mittelteil ist ca. 3x so lang wie ein einzelner Griff.",
+          "SCHLANK — Durchmesser wie ein Besenstiel (3-4cm). Eine Hand kann den Griff komplett umschließen. NICHT dick wie eine Flasche oder Nudelrolle.",
+          "Ca. 10-12 deutlich sichtbare gerillte Segmente im hellen Mittelteil — zahnradartige Textur.",
+          "52cm Gesamtlänge — etwas kürzer als ein Unterarm. DEUTLICH dünner als ein Arm.",
+          "BEIDE Hände halten die DUNKLEN Griffe — nie den hellen Mittelteil greifen.",
+          "Wird auf NACKTER HAUT oder DÜNNEM Stoff angewendet, NICHT auf dicker Kleidung.",
+          "Person SITZT (Sofa, Stuhl, Bank, Bett) — NICHT am Boden, NICHT stehend."
         ],
         "must_avoid": [
           "Zu dick/groß — der Stab ist SCHLANK wie ein Besenstiel, NICHT wie eine Nudelrolle",
