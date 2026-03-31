@@ -18,6 +18,8 @@ export type Creative = {
   creative_style: string;
   creative_type: string;
   season: string;
+  environment: string | null;
+  product_category: string | null;
   created_at: string;
 };
 
@@ -52,12 +54,29 @@ export function getImageUrl(creative: Creative): string | null {
   return null;
 }
 
-export function getDownloadUrl(creative: Creative): string | null {
-  const imageUrl = getImageUrl(creative);
-  if (!imageUrl) return null;
+export function getDownloadFilename(creative: Creative): string {
   const slug = creative.sub_angle.toLowerCase().replace(/\s+/g, "_").replace(/[^a-z0-9_]/g, "");
-  const filename = `${creative.angle}_${slug}_${creative.format.replace(":", "x")}.png`;
-  return `/api/download?url=${encodeURIComponent(imageUrl)}&filename=${encodeURIComponent(filename)}`;
+  return `${creative.angle}_${slug}_${creative.format.replace(":", "x")}.png`;
+}
+
+export async function downloadCreative(creative: Creative) {
+  const imageUrl = getImageUrl(creative);
+  if (!imageUrl) return;
+  try {
+    const resp = await fetch(`/api/download?url=${encodeURIComponent(imageUrl)}&filename=img`);
+    const blob = await resp.blob();
+    const blobUrl = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = blobUrl;
+    a.download = getDownloadFilename(creative);
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(blobUrl);
+  } catch (e) {
+    // Fallback: open in new tab
+    window.open(imageUrl, "_blank");
+  }
 }
 
 type CreativeCardProps = {
@@ -119,17 +138,31 @@ export default function CreativeCard({
             {creative.format}
           </span>
         </div>
-        <div className="absolute top-2 left-2 flex gap-1">
-          {creative.creative_style === "off_brand" && (
-            <span className="bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">
-              OFF
-            </span>
-          )}
-          {creative.season && creative.season !== "evergreen" && (
-            <span className="bg-accent/80 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded shadow-sm capitalize">
-              {creative.season}
-            </span>
-          )}
+        <div className="absolute top-2 left-2 flex flex-col gap-1">
+          <div className="flex gap-1">
+            {creative.creative_style === "off_brand" && (
+              <span className="bg-orange-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded shadow-sm">
+                OFF
+              </span>
+            )}
+            {creative.season && creative.season !== "evergreen" && (
+              <span className="bg-accent/80 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded shadow-sm capitalize">
+                {creative.season}
+              </span>
+            )}
+          </div>
+          <div className="flex gap-1">
+            {creative.product_category && (
+              <span className="bg-black/50 backdrop-blur-sm text-white text-[9px] font-medium px-1.5 py-0.5 rounded shadow-sm capitalize">
+                {creative.product_category}
+              </span>
+            )}
+            {creative.environment && (
+              <span className="bg-primary/70 backdrop-blur-sm text-white text-[9px] font-medium px-1.5 py-0.5 rounded shadow-sm capitalize">
+                {creative.environment}
+              </span>
+            )}
+          </div>
         </div>
       </div>
 

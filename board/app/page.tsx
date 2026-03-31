@@ -7,7 +7,7 @@ import CreativeCard, {
   Creative,
   ANGLE_EMOJI,
   getImageUrl,
-  getDownloadUrl,
+  downloadCreative,
 } from "@/components/CreativeCard";
 import ImageOverlay from "@/components/ImageOverlay";
 import SaveButton from "@/components/SaveButton";
@@ -20,6 +20,8 @@ export default function Board() {
   const [styleFilter, setStyleFilter] = useState("all");
   const [typeFilter, setTypeFilter] = useState("all");
   const [seasonFilter, setSeasonFilter] = useState("all");
+  const [envFilter, setEnvFilter] = useState("all");
+  const [productCatFilter, setProductCatFilter] = useState("all");
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<Creative | null>(null);
 
@@ -89,7 +91,9 @@ export default function Board() {
     .filter((c) => filter === "all" || c.angle === filter)
     .filter((c) => styleFilter === "all" || c.creative_style === styleFilter)
     .filter((c) => typeFilter === "all" || c.creative_type === typeFilter)
-    .filter((c) => seasonFilter === "all" || c.season === seasonFilter);
+    .filter((c) => seasonFilter === "all" || c.season === seasonFilter)
+    .filter((c) => envFilter === "all" || c.environment === envFilter)
+    .filter((c) => productCatFilter === "all" || c.product_category === productCatFilter);
   const doneCount = creatives.filter((c) => c.status === "done").length;
   const generatingCount = creatives.filter((c) => c.status === "generating").length;
 
@@ -115,79 +119,78 @@ export default function Board() {
   return (
     <div className="min-h-screen bg-background">
       {/* Filter Bar */}
-      <div className="sticky top-[57px] z-40 bg-surface/95 backdrop-blur-sm border-b border-border px-6 py-2.5 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <span className="text-xs font-semibold text-accent tabular-nums">
-            {filtered.length}
-            <span className="text-muted font-normal"> / {doneCount} Creatives</span>
-          </span>
-          {generatingCount > 0 && (
-            <span className="flex items-center gap-1.5 text-xs text-primary">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-              {generatingCount} generiert...
+      <div className="sticky top-[57px] z-40 bg-surface/95 backdrop-blur-sm border-b border-border px-6 py-2">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-semibold text-accent tabular-nums">
+              {filtered.length}
+              <span className="text-muted font-normal"> / {doneCount}</span>
             </span>
-          )}
-        </div>
-        <div className="flex items-center gap-2">
-          {/* Type toggle */}
-          <div className="flex items-center bg-background rounded-lg p-0.5 gap-0.5">
-            {(["all", "lifestyle", "product_static"] as const).map((type) => (
-              <button
-                key={type}
-                onClick={() => setTypeFilter(type)}
-                className={`text-xs font-medium px-2.5 py-1 rounded-md transition-all ${
-                  typeFilter === type
-                    ? "bg-surface text-primary shadow-sm"
-                    : "text-muted hover:text-accent"
-                }`}
-              >
-                {type === "all" ? "Alle" : type === "lifestyle" ? "Lifestyle" : "Product"}
-              </button>
-            ))}
+            {generatingCount > 0 && (
+              <span className="flex items-center gap-1.5 text-xs text-primary">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
+                {generatingCount} generiert...
+              </span>
+            )}
           </div>
-          {/* Style toggle */}
-          <div className="flex items-center bg-background rounded-lg p-0.5 gap-0.5">
-            {(["all", "on_brand", "off_brand"] as const).map((style) => (
-              <button
-                key={style}
-                onClick={() => setStyleFilter(style)}
-                className={`text-xs font-medium px-2.5 py-1 rounded-md transition-all ${
-                  styleFilter === style
-                    ? "bg-surface text-primary shadow-sm"
-                    : "text-muted hover:text-accent"
-                }`}
-              >
-                {style === "all" ? "Alle" : style === "on_brand" ? "On-Brand" : "Off-Brand"}
-              </button>
-            ))}
+          <div className="flex items-center gap-2 flex-wrap justify-end">
+            {/* Type toggle */}
+            <div className="flex items-center bg-background rounded-lg p-0.5 gap-0.5">
+              {(["all", "lifestyle", "product_static"] as const).map((type) => (
+                <button
+                  key={type}
+                  onClick={() => setTypeFilter(type)}
+                  className={`text-[11px] font-medium px-2 py-1 rounded-md transition-all ${
+                    typeFilter === type ? "bg-surface text-primary shadow-sm" : "text-muted hover:text-accent"
+                  }`}
+                >
+                  {type === "all" ? "Alle" : type === "lifestyle" ? "Lifestyle" : "Product"}
+                </button>
+              ))}
+            </div>
+            {/* Style toggle */}
+            <div className="flex items-center bg-background rounded-lg p-0.5 gap-0.5">
+              {(["all", "on_brand", "off_brand"] as const).map((style) => (
+                <button
+                  key={style}
+                  onClick={() => setStyleFilter(style)}
+                  className={`text-[11px] font-medium px-2 py-1 rounded-md transition-all ${
+                    styleFilter === style ? "bg-surface text-primary shadow-sm" : "text-muted hover:text-accent"
+                  }`}
+                >
+                  {style === "all" ? "Alle" : style === "on_brand" ? "On" : "Off"}
+                </button>
+              ))}
+            </div>
+            {/* Dropdowns */}
+            <select value={productCatFilter} onChange={(e) => setProductCatFilter(e.target.value)} className="text-[11px] border border-border rounded-lg px-2 py-1.5 text-accent bg-surface focus:outline-none focus:border-primary">
+              <option value="all">Alle Produkte</option>
+              <option value="stäbe">Stäbe</option>
+              <option value="sets">Sets</option>
+              <option value="sprays">Sprays</option>
+            </select>
+            <select value={envFilter} onChange={(e) => setEnvFilter(e.target.value)} className="text-[11px] border border-border rounded-lg px-2 py-1.5 text-accent bg-surface focus:outline-none focus:border-primary">
+              <option value="all">Alle Environments</option>
+              <option value="wohnzimmer">Wohnzimmer</option>
+              <option value="garten">Garten</option>
+              <option value="schlafzimmer">Schlafzimmer</option>
+              <option value="studio">Studio</option>
+            </select>
+            <select value={seasonFilter} onChange={(e) => setSeasonFilter(e.target.value)} className="text-[11px] border border-border rounded-lg px-2 py-1.5 text-accent bg-surface focus:outline-none focus:border-primary">
+              <option value="all">Season</option>
+              <option value="evergreen">Evergreen</option>
+              <option value="sommer">Sommer</option>
+              <option value="frühling">Frühling</option>
+              <option value="herbst">Herbst</option>
+              <option value="winter">Winter</option>
+            </select>
+            <select value={filter} onChange={(e) => setFilter(e.target.value)} className="text-[11px] border border-border rounded-lg px-2 py-1.5 text-accent bg-surface focus:outline-none focus:border-primary">
+              <option value="all">Angle</option>
+              {angles.map((a) => (
+                <option key={a} value={a}>{ANGLE_EMOJI[a] || ""} {a} ({creatives.filter((c) => c.angle === a).length})</option>
+              ))}
+            </select>
           </div>
-          {/* Season dropdown */}
-          <select
-            value={seasonFilter}
-            onChange={(e) => setSeasonFilter(e.target.value)}
-            className="text-xs border border-border rounded-lg px-2.5 py-1.5 text-accent bg-surface focus:outline-none focus:border-primary"
-          >
-            <option value="all">Alle Seasons</option>
-            <option value="evergreen">Evergreen</option>
-            <option value="frühling">Frühling</option>
-            <option value="sommer">Sommer</option>
-            <option value="herbst">Herbst</option>
-            <option value="winter">Winter</option>
-          </select>
-          {/* Angle dropdown */}
-          <select
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-            className="text-xs border border-border rounded-lg px-2.5 py-1.5 text-accent bg-surface focus:outline-none focus:border-primary"
-          >
-            <option value="all">Alle Angles</option>
-            {angles.map((a) => (
-              <option key={a} value={a}>
-                {ANGLE_EMOJI[a] || ""} {a} (
-                {creatives.filter((c) => c.angle === a).length})
-              </option>
-            ))}
-          </select>
         </div>
       </div>
 
@@ -220,13 +223,13 @@ export default function Board() {
                   creative.status === "done" && (
                     <>
                       <SaveButton creative={creative} />
-                      {getDownloadUrl(creative) && (
-                        <a
-                          href={getDownloadUrl(creative)!}
+                      {getImageUrl(creative) && (
+                        <button
+                          onClick={() => downloadCreative(creative)}
                           className="flex-1 text-center text-xs font-semibold bg-primary text-white py-1.5 rounded-lg hover:bg-primary/80 transition-colors"
                         >
                           Download
-                        </a>
+                        </button>
                       )}
                     </>
                   )

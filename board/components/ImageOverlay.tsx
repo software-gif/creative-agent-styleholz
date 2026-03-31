@@ -1,6 +1,6 @@
 "use client";
 
-import { Creative, getImageUrl, getDownloadUrl } from "./CreativeCard";
+import { Creative, getImageUrl, downloadCreative } from "./CreativeCard";
 
 type ImageOverlayProps = {
   creative: Creative | null;
@@ -12,6 +12,14 @@ export default function ImageOverlay({ creative, onClose }: ImageOverlayProps) {
 
   const imageUrl = getImageUrl(creative);
   if (!imageUrl) return null;
+
+  const pixelSizes: Record<string, string> = {
+    "4:5": "1440 × 1800 px",
+    "9:16": "1440 × 2560 px",
+    "1:1": "1440 × 1440 px",
+    "16:9": "2560 × 1440 px",
+  };
+  const pixelSize = pixelSizes[creative.format] || creative.format;
 
   return (
     <div
@@ -37,7 +45,10 @@ export default function ImageOverlay({ creative, onClose }: ImageOverlayProps) {
             {creative.hook_text && (
               <p className="text-sm text-white/70 mt-2 italic">&ldquo;{creative.hook_text}&rdquo;</p>
             )}
-            <div className="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-white/10 text-xs text-white/50">
+            <div className="mt-3 pt-3 border-t border-white/10">
+              <p className="text-xs font-mono text-white/80 mb-2">{pixelSize}</p>
+            </div>
+            <div className="flex flex-wrap items-center gap-2 text-xs text-white/50">
               <span>{creative.format}</span>
               <span>·</span>
               <span>{creative.creative_style === "off_brand" ? "Off-Brand" : "On-Brand"}</span>
@@ -50,9 +61,9 @@ export default function ImageOverlay({ creative, onClose }: ImageOverlayProps) {
                 </>
               )}
             </div>
-            {getDownloadUrl(creative) && (
-              <a
-                href={getDownloadUrl(creative)!}
+            {imageUrl && (
+              <button
+                onClick={() => downloadCreative(creative)}
                 className="mt-3 flex items-center justify-center gap-1.5 text-sm font-semibold bg-white text-black py-2 rounded-lg hover:bg-white/90 transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
@@ -60,7 +71,7 @@ export default function ImageOverlay({ creative, onClose }: ImageOverlayProps) {
                   <path d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z" />
                 </svg>
                 Download
-              </a>
+              </button>
             )}
           </div>
         </div>

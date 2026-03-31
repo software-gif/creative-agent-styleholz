@@ -21,7 +21,7 @@
         },
         "grooves": "Der Mittelteil besteht aus ca. 10-12 einzelnen gerillten Segmenten. Jedes Segment hat deutliche Rillen/Kerben (wie kleine Zahnräder). Die Rillung erzeugt den Vibrationseffekt.",
         "flex": "Der Stab ist BIEGSAM — er biegt sich leicht wenn man ihn auf den Körper drückt und passt sich Körperkonturen an.",
-        "branding": "Kleine 'styleholz — wood a feeling' Gravur auf einem Griff"
+        "branding": "Kleine 'styleholz — wood a feeling' Gravur auf dem RECHTEN dunklen Nussholz-Griff (wenn der Stab horizontal liegt, Griffe links und rechts). Die Gravur ist dezent, hellbraun auf dunkelbraun, kaum sichtbar. AI sollte die Gravur NICHT betonen oder erfinden — sie ist zu klein um sie in generierten Bildern korrekt darzustellen. Besser: Gravur in AI-Bildern WEGLASSEN als sie falsch darzustellen."
       },
 
       "size_references": {
@@ -90,6 +90,42 @@
           "Rechtschreibfehler in deutschen Texten",
           "NIEMALS über das KNIE rollen — der Stab wird ÜBER DIE WADE (Unterschenkel-Muskel) oder ÜBER DEN OBERSCHENKEL (Quadrizeps/Beinrückseite) gerollt. Das Kniegelenk selbst wird NICHT behandelt. Der Stab muss auf einem MUSKEL liegen, nicht auf einem GELENK.",
           "NIEMALS Stab direkt auf Knochen oder Gelenke anwenden — nur auf Muskeln/Faszien (Wade, Oberschenkel, Nacken, Schultern, Rückenmuskulatur)"
+        ]
+      }
+    },
+
+    "muskel-aktiv-spray-zirbe": {
+      "name": "Muskel-Aktiv Körperspray mit Zirben-Öl",
+      "is_hero_product": false,
+      "price": "€16,25",
+      "volume": "100 ml",
+      "product_category": "sprays",
+
+      "appearance": {
+        "summary": "Eine bernsteinfarbene/braune Glasflasche (100ml) mit schwarzem Sprühkopf. Das Etikett ist dunkelgrün (waldgrün) mit weißer Schrift 'Muskel Aktiv' und 'Körperspray mit echtem Zirben-Öl'. Dazu gehört eine dunkelgrüne Verpackungsbox mit styleholz Branding.",
+        "bottle": "Bernsteinfarbene/braune Glasflasche, ca. 12-15cm hoch",
+        "cap": "Schwarzer Sprühkopf/Pump-Zerstäuber",
+        "label": "Dunkelgrünes Etikett mit weißer Schrift: 'styleholz.' oben, 'Muskel Aktiv' groß in der Mitte, 'Körperspray mit echtem Zirben-Öl' darunter, 'Bei Verspannungen und Muskelkater' unten",
+        "box": "Dunkelgrüne Kartonverpackung mit derselben Typografie"
+      },
+
+      "how_it_works": {
+        "principle": "Auf die Haut sprühen, einmassieren. Unterstützt Muskelregeneration und aktiviert die Durchblutung. Wirkt angenehm kühlend. Enthält ätherische Öle aus Zirbe und Latschenkiefer.",
+        "usage": "Vor oder nach dem Faszientraining auf die betroffenen Stellen sprühen. Auch standalone als Muskelspray verwendbar."
+      },
+
+      "ai_generation_rules": {
+        "must_match": [
+          "Bernsteinfarbene/braune GLAS-Flasche (nicht Plastik)",
+          "Schwarzer Sprühkopf oben",
+          "Dunkelgrünes Etikett mit weißer 'Muskel Aktiv' Schrift",
+          "Flasche ist ca. 12-15cm hoch, schlank"
+        ],
+        "must_avoid": [
+          "Weiße oder helle Flasche — Flasche ist bernsteinfarben/braun",
+          "Anderes Etikett-Design — muss dunkelgrün mit weißer Schrift sein",
+          "Plastik-Look — es ist GLAS",
+          "Falscher Name auf dem Etikett"
         ]
       }
     },
