@@ -181,9 +181,22 @@ export default function Board() {
             {/* Dropdowns */}
             <select value={productCatFilter} onChange={(e) => setProductCatFilter(e.target.value)} className="text-[11px] border border-border rounded-lg px-2 py-1.5 text-accent bg-surface focus:outline-none focus:border-primary">
               <option value="all">Alle Produkte</option>
-              <option value="stäbe">Stäbe</option>
-              <option value="sets">Sets</option>
-              <option value="sprays">Sprays</option>
+              <optgroup label="Woodstick">
+                <option value="woodstick_flex">Woodstick FLEX</option>
+                <option value="woodstick_mini">Woodstick MINI</option>
+              </optgroup>
+              <optgroup label="Sets">
+                <option value="sets">Sets</option>
+              </optgroup>
+              <optgroup label="Sprays">
+                <option value="muskel_aktiv">Muskel-Aktiv</option>
+                <option value="venen_vital">Venen-Vital</option>
+                <option value="schlaf_balance">Schlaf-Balance</option>
+              </optgroup>
+              <optgroup label="Weitere">
+                <option value="fussroller">Fußroller</option>
+                <option value="massage_oel">Massage-Öl</option>
+              </optgroup>
             </select>
             <select value={envFilter} onChange={(e) => setEnvFilter(e.target.value)} className="text-[11px] border border-border rounded-lg px-2 py-1.5 text-accent bg-surface focus:outline-none focus:border-primary">
               <option value="all">Alle Environments</option>

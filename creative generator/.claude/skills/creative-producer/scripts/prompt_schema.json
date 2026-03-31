@@ -12,7 +12,7 @@
     "creative_type": "string — 'lifestyle' | 'product_static'. PFLICHT. 'lifestyle' = Frau 45+ nutzt Produkt in echtem Setting (Sofa, Garten, Bett). Nur Headline + Subheadline. 'product_static' = Produkt-Hero-Shot mit Text-Overlays, Icons, Benefits, CTA.",
     "season": "string — 'evergreen' | 'sommer' | 'frühling' | 'herbst' | 'winter' | 'valentinstag' | 'ostern' | 'muttertag' | 'black_friday' | 'black_week' | 'weihnachten'. Default: 'evergreen'. Bestimmt Umgebung, Farben, Kleidung der Person.",
     "environment": "string | null — 'wohnzimmer' | 'garten' | 'schlafzimmer' | 'studio' | null. Für Lifestyle-Bilder: wo die Szene spielt. Null für Product Statics ohne Umgebung.",
-    "product_category": "string | null — 'stäbe' | 'sets' | 'sprays'. Welche Produktkategorie beworben wird.",
+    "product_category": "string | null — 'woodstick_flex' | 'woodstick_mini' | 'sets' | 'muskel_aktiv' | 'venen_vital' | 'schlaf_balance' | 'fussroller' | 'massage_oel'. Welches Produkt beworben wird. Produktnamen wie im Shop.",
     "generation_mode": "string — 'raw' | 'composited' | 'both'. 'raw' = nur Lifestyle/Produkt-Bild ohne Text-Overlay. 'composited' = mit Text + Compositor. 'both' = Raw + Composited werden beide gespeichert. Default: 'both'.",
     "format": "string — '4:5' oder '9:16'",
     "resolution": {
