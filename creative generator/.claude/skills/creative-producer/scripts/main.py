@@ -550,8 +550,28 @@ IMPORTANT: This is a NEGATIVE/PROBLEM scene. Do NOT show the advertised product.
             }
         })
         parts.append({
-            "text": "Above is the product image to incorporate into the ad. Use this exact product (bottle/packaging design, label, colors) in the generated image.\n\n"
+            "text": "REFERENCE IMAGE 1: This shows the EXACT product you must reproduce. Note the TWO DIFFERENT WOOD COLORS: DARK brown handles on both ends, LIGHT blonde/cream grooved segments in the middle. The stick is SLIM (3-4cm). Match these proportions and colors EXACTLY.\n\n"
         })
+
+        # Try to add a second reference image for better product accuracy
+        product_dir = os.path.dirname(product_image_path)
+        detail_candidates = ["3.jpg", "5.jpg", "1.jpg"]  # Detail/flex/usage shots
+        for detail_file in detail_candidates:
+            detail_path = os.path.join(product_dir, detail_file) if os.path.isabs(product_dir) else os.path.join(PROJECT_ROOT, product_dir, detail_file)
+            if os.path.exists(detail_path):
+                detail_data, detail_mime = encode_image(detail_path)
+                if detail_data:
+                    parts.append({
+                        "inline_data": {
+                            "mime_type": detail_mime,
+                            "data": detail_data
+                        }
+                    })
+                    parts.append({
+                        "text": "REFERENCE IMAGE 2: Another view of the same product. CRITICAL DETAILS TO MATCH: The DARK walnut handles (chocolate brown) vs the LIGHT ash grooved middle (honey/cream). The proportions are: 1/5 dark handle — 3/5 light grooved middle — 1/5 dark handle. The stick is slim like a broom handle. REPRODUCE THESE EXACT PROPORTIONS AND COLORS.\n\n"
+                    })
+                    print(f"  Added second reference: {detail_file}")
+                    break
     elif is_negative_scene:
         parts.append({
             "text": "IMPORTANT: This is a NEGATIVE scene showing a PROBLEM. Do NOT use any branded or recognizable product. Show only generic, unbranded items. No brand names, no logos, no recognizable product designs.\n\n"
