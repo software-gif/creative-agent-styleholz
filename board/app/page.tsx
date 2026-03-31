@@ -186,7 +186,9 @@ export default function Board() {
                 <option value="woodstick_mini">Woodstick MINI</option>
               </optgroup>
               <optgroup label="Sets">
-                <option value="sets">Sets</option>
+                <option value="all_in_set">All-In Set</option>
+                <option value="starter_set">Starter-Set</option>
+                <option value="leichte_beine_set">Leichte Beine Set</option>
               </optgroup>
               <optgroup label="Sprays">
                 <option value="muskel_aktiv">Muskel-Aktiv</option>
