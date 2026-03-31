@@ -69,6 +69,26 @@
       "description": "Sitzend, Stab auf Oberschenkel, schaut direkt in die Kamera (Testimonial-Style)",
       "prompt_snippet": "sitting on {setting_furniture}, rolling the stick on her UPPER THIGH. Both hands on DARK handles. She looks DIRECTLY at the camera with a warm, genuine smile — like recommending the product to a friend. Bare legs.",
       "body_parts_visible": "bare thighs, eye contact, warm smile, hands on dark handles"
+    },
+    "oberschenkel_lachend_seite": {
+      "description": "Seitlich auf dem Sofa sitzend, Beine angezogen, Stab auf Oberschenkel, lacht",
+      "prompt_snippet": "sitting sideways on {setting_furniture}, legs tucked up beside her. Rolling the stick on her UPPER THIGH. Both hands on DARK handles. She is laughing naturally, looking slightly away from camera. Bare legs. Casual, candid moment.",
+      "body_parts_visible": "bare thighs, natural laugh, sideways sitting"
+    },
+    "wade_fuss_auf_tisch": {
+      "description": "Sitzend, ein Fuß auf dem Couchtisch/Hocker, Stab auf der Wade",
+      "prompt_snippet": "sitting on {setting_furniture}, one bare foot propped up on a small stool or ottoman in front. Rolling the stick on her bare CALF MUSCLE of the raised leg. Both hands on DARK handles. Relaxed, with a cup of tea nearby.",
+      "body_parts_visible": "bare calf raised, foot on stool, hands on dark handles"
+    },
+    "nacken_augen_geschlossen": {
+      "description": "Von der Seite, Stab hinter Nacken, Augen geschlossen, genießt den Moment",
+      "prompt_snippet": "seen from a THREE-QUARTER ANGLE (between side and behind). Hair UP in bun. Eyes CLOSED in bliss. She holds the stick behind her neck, both hands on DARK handles. Head tilted slightly back. Bare shoulders in sleeveless top. The expression is pure relaxation — like a spa moment at home.",
+      "body_parts_visible": "side-behind view, bare neck, eyes closed, blissful expression"
+    },
+    "oberschenkel_morgens_kaffee": {
+      "description": "Am Bettrand sitzend, Stab auf Oberschenkel, Kaffeetasse daneben, Morgen-Routine",
+      "prompt_snippet": "sitting on the edge of {setting_furniture}, rolling the stick on her UPPER THIGH. Both hands on DARK handles. A warm cup of coffee/tea on the nightstand beside her. Morning light. She looks content, starting her day with a wellness routine. Bare legs in sleep shorts.",
+      "body_parts_visible": "bare thighs, morning scene, coffee cup, relaxed morning face"
     }
   },
 

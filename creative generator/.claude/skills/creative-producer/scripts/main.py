@@ -543,35 +543,40 @@ IMPORTANT: This is a NEGATIVE/PROBLEM scene. Do NOT show the advertised product.
 
     parts = []
     if image_data and not is_negative_scene:
-        parts.append({
-            "inline_data": {
-                "mime_type": mime_type,
-                "data": image_data
-            }
-        })
-        parts.append({
-            "text": "REFERENCE IMAGE 1: This shows the EXACT product you must reproduce. Note the TWO DIFFERENT WOOD COLORS: DARK brown handles on both ends, LIGHT blonde/cream grooved segments in the middle. The stick is SLIM (3-4cm). Match these proportions and colors EXACTLY.\n\n"
-        })
+        # Multi-reference system: send up to 5 product images for maximum accuracy
+        reference_descriptions = [
+            ("REFERENCE 1 — PRODUCT OVERVIEW: This shows the EXACT product. Note TWO DIFFERENT WOOD COLORS: DARK chocolate-brown handles on both ends + LIGHT honey/cream grooved segments in the middle. Proportions: 1/5 dark — 3/5 light — 1/5 dark. SLIM stick (3-4cm diameter, 52cm long)."),
+        ]
+        parts.append({"inline_data": {"mime_type": mime_type, "data": image_data}})
+        parts.append({"text": reference_descriptions[0] + "\n\n"})
 
-        # Try to add a second reference image for better product accuracy
+        # Add additional reference images from product directory
         product_dir = os.path.dirname(product_image_path)
-        detail_candidates = ["3.jpg", "5.jpg", "1.jpg"]  # Detail/flex/usage shots
-        for detail_file in detail_candidates:
-            detail_path = os.path.join(product_dir, detail_file) if os.path.isabs(product_dir) else os.path.join(PROJECT_ROOT, product_dir, detail_file)
-            if os.path.exists(detail_path):
-                detail_data, detail_mime = encode_image(detail_path)
-                if detail_data:
-                    parts.append({
-                        "inline_data": {
-                            "mime_type": detail_mime,
-                            "data": detail_data
-                        }
-                    })
-                    parts.append({
-                        "text": "REFERENCE IMAGE 2: Another view of the same product. CRITICAL DETAILS TO MATCH: The DARK walnut handles (chocolate brown) vs the LIGHT ash grooved middle (honey/cream). The proportions are: 1/5 dark handle — 3/5 light grooved middle — 1/5 dark handle. The stick is slim like a broom handle. REPRODUCE THESE EXACT PROPORTIONS AND COLORS.\n\n"
-                    })
-                    print(f"  Added second reference: {detail_file}")
-                    break
+        if not os.path.isabs(product_dir):
+            product_dir = os.path.join(PROJECT_ROOT, product_dir)
+
+        extra_refs = [
+            ("3.jpg", "REFERENCE 2 — FLEX/BEND VIEW: Shows the stick BENDING. Note the clear TWO-TONE contrast: DARK handles vs LIGHT grooved middle. This is the key visual feature."),
+            ("2.jpg", "REFERENCE 3 — USAGE ON THIGH: Shows correct usage on a thigh. Note the SIZE relative to a human leg — the stick is about as long as the distance from hip to knee. Both hands grip the DARK handles."),
+            ("1.jpg", "REFERENCE 4 — USAGE ON NECK: Shows correct neck application from BEHIND. Both hands on DARK handles, grooved middle on bare neck. Note proportions vs human shoulders."),
+            ("4.jpg", "REFERENCE 5 — USAGE CONTEXT: Shows the product being used in a real setting. Note the slim proportions and two-tone wood colors."),
+        ]
+
+        ref_count = 1
+        for ref_file, ref_desc in extra_refs:
+            ref_path = os.path.join(product_dir, ref_file)
+            if os.path.exists(ref_path) and ref_count < 5:
+                ref_data, ref_mime = encode_image(ref_path)
+                if ref_data:
+                    parts.append({"inline_data": {"mime_type": ref_mime, "data": ref_data}})
+                    parts.append({"text": ref_desc + "\n\n"})
+                    ref_count += 1
+
+        if ref_count > 1:
+            print(f"  Multi-reference: {ref_count} product images sent to Gemini")
+        parts.append({
+            "text": f"YOU HAVE {ref_count} REFERENCE IMAGES ABOVE. The product in your generated image MUST match these references EXACTLY — same two-tone colors, same slim proportions, same grooved texture. Study all references carefully before generating.\n\n"
+        })
     elif is_negative_scene:
         parts.append({
             "text": "IMPORTANT: This is a NEGATIVE scene showing a PROBLEM. Do NOT use any branded or recognizable product. Show only generic, unbranded items. No brand names, no logos, no recognizable product designs.\n\n"
