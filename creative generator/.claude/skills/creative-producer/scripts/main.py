@@ -11,6 +11,7 @@ import io
 import json
 import os
 import signal
+import random
 import sys
 import threading
 import time
@@ -210,6 +211,54 @@ def encode_image(image_path):
     return data, mime_type
 
 
+def load_lifestyle_variance():
+    """Load lifestyle variance pool for diverse creative generation."""
+    lv_path = os.path.join(PROJECT_ROOT, "branding", "lifestyle_variance.json")
+    if os.path.exists(lv_path):
+        with open(lv_path) as f:
+            return json.load(f)
+    return None
+
+
+def inject_lifestyle_variance(ad_prompt_json):
+    """Auto-inject variance into lifestyle prompts for model/pose/setting diversity."""
+    meta = ad_prompt_json.get("meta", {})
+    if meta.get("creative_type") != "lifestyle":
+        return ""
+
+    lv = load_lifestyle_variance()
+    if not lv:
+        return ""
+
+    # Pick random model
+    model = random.choice(lv.get("models", []))
+    model_text = model.get("prompt_snippet", "")
+
+    # Pick random outfit
+    outfits = lv.get("outfits_summer", [])
+    outfit = random.choice(outfits) if outfits else ""
+
+    # Pick random setting based on environment
+    env = meta.get("environment", "wohnzimmer")
+    settings = lv.get("settings", {})
+    env_settings = [k for k in settings if k.startswith(env or "wohnzimmer")]
+    if not env_settings:
+        env_settings = list(settings.keys())
+    setting_key = random.choice(env_settings)
+    setting = settings[setting_key]
+    setting_text = setting.get("prompt_snippet", "")
+
+    variance_text = f"""
+LIFESTYLE VARIANCE (use these specific details for this creative):
+- MODEL: {model_text}
+- OUTFIT: {outfit}
+- SETTING: {setting_text}
+- IMPORTANT: Make this person look UNIQUE and DIFFERENT from other creatives. Vary hair, face, body type, expression.
+"""
+    print(f"  Variance: {model.get('id', '?')}, {setting_key}, {outfit[:30]}...")
+    return variance_text
+
+
 def build_gemini_prompt(ad_prompt_json, product_image_path):
     """Build the Gemini API request payload from a JSON prompt + product image."""
 
@@ -342,10 +391,13 @@ SPELLING: All German text MUST be spelled correctly. Double-check every word. Co
     except Exception:
         pass
 
+    # Inject lifestyle variance for model/pose/setting diversity
+    variance_text = inject_lifestyle_variance(ad_prompt_json)
+
     prompt_text = f"""Generate a professional static advertisement image with the following exact specifications.
 
 FORMAT: {meta['format']} aspect ratio, {meta['resolution']['width']}x{meta['resolution']['height']} pixels.
-{product_detail_text}{meta_bp_text}
+{product_detail_text}{meta_bp_text}{variance_text}
 STYLE: {gen_instructions['style_reference']}
 
 BACKGROUND:

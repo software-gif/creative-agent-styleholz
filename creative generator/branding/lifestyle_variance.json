@@ -1,0 +1,101 @@
+{
+  "_description": "Varianz-Pool für Lifestyle-Creatives. Der Creative Producer wählt zufällig aus diesen Optionen um diverse Bilder zu generieren. Wird automatisch in Prompts injiziert.",
+
+  "models": [
+    {
+      "id": "m1",
+      "description": "Frau Mitte 40, dunkelblonde schulterlange Haare, natürlicher Look, schlank",
+      "prompt_snippet": "A woman aged 44 with shoulder-length dark blonde hair, natural look, slim build, gentle smile"
+    },
+    {
+      "id": "m2",
+      "description": "Frau Ende 40, kurze braune Haare, sportlich-elegant, etwas kräftiger",
+      "prompt_snippet": "A woman aged 49 with short brown hair in a bob cut, elegant appearance, medium build, warm expression"
+    },
+    {
+      "id": "m3",
+      "description": "Frau Anfang 50, graublonde Haare hochgesteckt, klassisch-elegant",
+      "prompt_snippet": "A woman aged 51 with gray-blonde hair in a loose bun, classic elegant appearance, slender, serene expression"
+    },
+    {
+      "id": "m4",
+      "description": "Frau Mitte 40, lange dunkelbraune lockige Haare, mediterran",
+      "prompt_snippet": "A woman aged 45 with long dark brown curly hair, Mediterranean appearance, warm skin tone, radiant smile"
+    },
+    {
+      "id": "m5",
+      "description": "Frau Ende 40, rotblonde wellige Haare, helle Haut, nordisch",
+      "prompt_snippet": "A woman aged 48 with reddish-blonde wavy hair, fair Nordic skin, light freckles, calm content expression"
+    },
+    {
+      "id": "m6",
+      "description": "Frau Anfang 50, silbergraue kurze Haare, modern-elegant",
+      "prompt_snippet": "A woman aged 52 with short silver-gray hair, modern elegant style, fit build, confident relaxed expression"
+    }
+  ],
+
+  "poses": {
+    "oberschenkel_sitzend": {
+      "description": "Auf Sofa/Stuhl sitzend, Stab auf OBEREM Oberschenkel (weit über dem Knie)",
+      "prompt_snippet": "sitting on {setting_furniture}, rolling the wooden stick on her UPPER THIGH muscle (midway between hip and knee, well ABOVE the knee). Both hands grip the dark walnut handles. Bare legs in summer shorts.",
+      "body_parts_visible": "bare thighs, hands on dark handles, relaxed sitting position"
+    },
+    "wade_sitzend": {
+      "description": "Sitzend, ein Bein angewinkelt, Stab auf der WADE (Rückseite Unterschenkel)",
+      "prompt_snippet": "sitting on {setting_furniture}, one leg slightly raised. Rolling the wooden stick on her bare CALF MUSCLE (back of lower leg, between ankle and knee). Both hands grip the dark walnut handles.",
+      "body_parts_visible": "bare calves, hands on dark handles, relaxed sitting"
+    },
+    "nacken_von_hinten": {
+      "description": "Von hinten gesehen, Stab im Nacken, Arme oben angewinkelt",
+      "prompt_snippet": "seen from BEHIND. She holds the wooden stick behind her neck — left hand on left dark handle, right hand on right dark handle. Arms raised and angled behind her head. The light grooved middle section rests against her bare neck/upper back. Wearing a sleeveless top showing bare shoulders.",
+      "body_parts_visible": "back of neck, bare shoulders, arms raised"
+    },
+    "schulter_seitlich": {
+      "description": "Seitlich gesehen, Stab auf der Schulter/oberem Rücken",
+      "prompt_snippet": "seen from the SIDE. She uses the wooden stick on her bare SHOULDER, rolling it along the trapezius muscle. One hand on each dark handle. Wearing a tank top. Head slightly tilted in relaxation.",
+      "body_parts_visible": "bare shoulder, side profile, relaxed head tilt"
+    }
+  },
+
+  "settings": {
+    "wohnzimmer_sofa": {
+      "furniture": "a beige linen sofa",
+      "prompt_snippet": "bright modern living room with a beige linen sofa, green houseplants, warm afternoon light streaming through large windows. Scandinavian-style interior.",
+      "lighting": "warm afternoon window light"
+    },
+    "wohnzimmer_sessel": {
+      "furniture": "a cozy armchair",
+      "prompt_snippet": "cozy living room corner with a comfortable armchair, soft throw blanket, reading lamp nearby, warm golden light. Hygge atmosphere.",
+      "lighting": "warm golden lamp + window light"
+    },
+    "garten_bank": {
+      "furniture": "a wooden garden bench",
+      "prompt_snippet": "sunny garden terrace with a wooden bench, lush green plants and flowers in soft focus behind. Dappled sunlight through trees. Summer afternoon.",
+      "lighting": "golden hour dappled sunlight"
+    },
+    "garten_stuhl": {
+      "furniture": "a modern garden chair",
+      "prompt_snippet": "modern patio with a sleek garden chair, potted herbs nearby, blue sky with soft clouds. Bright summer day.",
+      "lighting": "bright natural summer light"
+    },
+    "schlafzimmer_bett": {
+      "furniture": "the edge of a bed",
+      "prompt_snippet": "bright airy bedroom, sitting on the edge of a bed with white/cream linen bedding. Soft morning light through sheer curtains. Peaceful morning routine atmosphere.",
+      "lighting": "soft morning window light"
+    },
+    "balkon": {
+      "furniture": "a small balcony chair",
+      "prompt_snippet": "sunny apartment balcony with a small bistro chair, potted plants on the railing, city or garden view in background. Morning coffee atmosphere.",
+      "lighting": "bright morning outdoor light"
+    }
+  },
+
+  "outfits_summer": [
+    "light linen shorts and a casual cream tank top, bare legs and arms",
+    "comfortable cotton shorts and a soft white t-shirt, bare legs",
+    "a light summer dress above the knee, bare arms and legs",
+    "casual denim shorts and a loose linen blouse, bare legs",
+    "yoga shorts and a simple sleeveless top, bare legs and shoulders",
+    "light cotton lounge shorts and a fitted tank top, bare legs and arms"
+  ]
+}
