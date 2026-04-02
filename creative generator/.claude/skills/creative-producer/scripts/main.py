@@ -593,10 +593,26 @@ IMPORTANT: This is a NEGATIVE/PROBLEM scene. Do NOT show the advertised product.
                 ref_count += 1
                 print(f"  Added engraving reference ({creative_type})")
 
+        # Add brand logo as reference if logo should be visible
+        logo_config = brand_elements.get("logo", {})
+        if logo_config.get("visible"):
+            logo_variant = "logo_dark.png" if logo_config.get("color_mode") != "light" else "logo_white.png"
+            logo_path = os.path.join(PROJECT_ROOT, "branding", logo_variant)
+            if os.path.exists(logo_path):
+                logo_data, logo_mime = encode_image(logo_path)
+                if logo_data:
+                    logo_pos = logo_config.get("position", "top_center")
+                    parts.append({"inline_data": {"mime_type": logo_mime, "data": logo_data}})
+                    parts.append({
+                        "text": f"BRAND LOGO REFERENCE: Place this EXACT logo at {logo_pos} of the image. Reproduce the logo EXACTLY as shown — same font, same proportions, same style. The logo text reads 'styleholz.' with a period. Do NOT invent a different logo — use this exact reference.\n\n"
+                    })
+                    ref_count += 1
+                    print(f"  Added logo reference ({logo_variant}, {logo_pos})")
+
         if ref_count > 1:
             print(f"  Multi-reference: {ref_count} product images sent to Gemini")
         parts.append({
-            "text": f"YOU HAVE {ref_count} REFERENCE IMAGES ABOVE. The product in your generated image MUST match these references EXACTLY — same two-tone colors, same slim proportions, same grooved texture, and the engraving on the right handle. Study all references carefully before generating.\n\n"
+            "text": f"YOU HAVE {ref_count} REFERENCE IMAGES ABOVE. The product in your generated image MUST match these references EXACTLY — same two-tone colors, same slim proportions, same grooved texture, and the engraving on the right handle. If a logo reference is included, place it exactly as instructed. Study all references carefully before generating.\n\n"
         })
     elif is_negative_scene:
         parts.append({
