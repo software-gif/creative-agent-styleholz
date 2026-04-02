@@ -828,15 +828,11 @@ def composite_all_overlays(image_bytes, ad_prompt):
     """Apply all compositor overlays: logo, social proof, payment icons, etc."""
     brand_elements = ad_prompt.get("brand_elements", {})
 
-    # 1. Logo
+    # 1. Logo — skip compositor if logo was sent as reference to Gemini (AI renders it directly)
     logo_config = brand_elements.get("logo", {})
     if logo_config.get("visible"):
-        image_bytes = composite_logo_in_memory(
-            image_bytes,
-            logo_config.get("position", "top_center"),
-            logo_config.get("color_mode", "auto"),
-            logo_config.get("size", "medium")
-        )
+        # Logo reference was sent to Gemini — it renders the logo itself, no compositor needed
+        print(f"  Logo: rendered by Gemini (reference image sent), skipping compositor")
 
     # 2. Social proof overlay (if file exists)
     social_proof_path = os.path.join(PROJECT_ROOT, "branding", "social_proof.png")
