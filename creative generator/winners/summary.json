@@ -1,0 +1,244 @@
+{
+  "total_ads": 20,
+  "active_ads": 1,
+  "static_ads": 20,
+  "static_ads_with_local_images": 20,
+  "format_distribution": {
+    "IMAGE": 20
+  },
+  "top_10_winners_overall": [
+    {
+      "ad_archive_id": "2212711662547645",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=2212711662547645",
+      "display_format": "IMAGE",
+      "winner_score": 216,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-23 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/2212711662547645.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "707589361748456",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=707589361748456",
+      "display_format": "IMAGE",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/707589361748456.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "1188577363130337",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1188577363130337",
+      "display_format": "IMAGE",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1188577363130337.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "25020659087573167",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=25020659087573167",
+      "display_format": "IMAGE",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/25020659087573167.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "1139632468283788",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1139632468283788",
+      "display_format": "IMAGE",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1139632468283788.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "1366185381834891",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1366185381834891",
+      "display_format": "IMAGE",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1366185381834891.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "833714346252327",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=833714346252327",
+      "display_format": "IMAGE",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/833714346252327.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "4073746346271027",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=4073746346271027",
+      "display_format": "IMAGE",
+      "winner_score": 196,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-23 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/4073746346271027.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "1352716069789222",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1352716069789222",
+      "display_format": "IMAGE",
+      "winner_score": 196,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-23 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1352716069789222.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "1521954465702119",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1521954465702119",
+      "display_format": "IMAGE",
+      "winner_score": 163,
+      "body_text": "🖤 Black Week bei styleholz: bis zu 35% sparen und ein Geschenk zu jeder Bestellung über 100€\n\nJetzt ist der perfekte Zeitpunkt, um dir oder deinen Liebsten etwas Gutes zu tun:\n➡️ bis zu -20% auf alle ",
+      "start_date": "2025-11-25 08:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1521954465702119.jpg"
+      ]
+    }
+  ],
+  "top_10_static_winners": [
+    {
+      "ad_archive_id": "2212711662547645",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=2212711662547645",
+      "winner_score": 216,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-23 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/2212711662547645.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "707589361748456",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=707589361748456",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/707589361748456.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "1188577363130337",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1188577363130337",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1188577363130337.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "25020659087573167",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=25020659087573167",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/25020659087573167.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "1139632468283788",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1139632468283788",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1139632468283788.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "1366185381834891",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1366185381834891",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1366185381834891.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "833714346252327",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=833714346252327",
+      "winner_score": 197,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-22 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/833714346252327.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "4073746346271027",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=4073746346271027",
+      "winner_score": 196,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-23 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/4073746346271027.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "1352716069789222",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1352716069789222",
+      "winner_score": 196,
+      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
+      "start_date": "2025-10-23 07:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1352716069789222.jpg"
+      ]
+    },
+    {
+      "ad_archive_id": "1521954465702119",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1521954465702119",
+      "winner_score": 163,
+      "body_text": "🖤 Black Week bei styleholz: bis zu 35% sparen und ein Geschenk zu jeder Bestellung über 100€\n\nJetzt ist der perfekte Zeitpunkt, um dir oder deinen Liebsten etwas Gutes zu tun:\n➡️ bis zu -20% auf alle ",
+      "start_date": "2025-11-25 08:00:00",
+      "is_active": false,
+      "local_image_paths": [
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1521954465702119.jpg"
+      ]
+    }
+  ],
+  "scraped_at": "2026-04-02T09:21:08.268092+00:00"
+}
