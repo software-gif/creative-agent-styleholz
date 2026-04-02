@@ -55,8 +55,11 @@ def scrape_ads(api_key, page_id, max_ads=0):
 
     ad_library_url = (
         f"https://www.facebook.com/ads/library/"
-        f"?active_status=all&ad_type=all&country=ALL"
-        f"&media_type=image&search_type=page&view_all_page_id={page_id}"
+        f"?active_status=all&ad_type=all&country=DE"
+        f"&is_targeted_country=false&media_type=all"
+        f"&search_type=page&sort_data[direction]=desc"
+        f"&sort_data[mode]=total_impressions"
+        f"&view_all_page_id={page_id}"
     )
 
     payload = {
@@ -65,7 +68,7 @@ def scrape_ads(api_key, page_id, max_ads=0):
     if max_ads > 0:
         payload["maxAds"] = max_ads
 
-    print(f"Scraping IMAGE ads for page {page_id} (active + inactive, 2025+)...")
+    print(f"Scraping ALL ads for page {page_id} (all formats, sorted by impressions)...")
     print(f"Max ads: {'all' if max_ads == 0 else max_ads}")
 
     # 1. Start async run

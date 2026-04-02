@@ -1,244 +1,243 @@
 {
-  "total_ads": 20,
-  "active_ads": 1,
-  "static_ads": 20,
-  "static_ads_with_local_images": 20,
+  "total_ads": 1496,
+  "active_ads": 131,
+  "static_ads": 1016,
+  "static_ads_with_local_images": 991,
   "format_distribution": {
-    "IMAGE": 20
+    "IMAGE": 866,
+    "VIDEO": 477,
+    "DCO": 150,
+    "CAROUSEL": 2,
+    "DPA": 1
   },
   "top_10_winners_overall": [
     {
-      "ad_archive_id": "2212711662547645",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=2212711662547645",
+      "ad_archive_id": "673616238588633",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=673616238588633",
       "display_format": "IMAGE",
-      "winner_score": 216,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-23 07:00:00",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/2212711662547645.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/673616238588633.jpg"
       ]
     },
     {
-      "ad_archive_id": "707589361748456",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=707589361748456",
+      "ad_archive_id": "1248468416851541",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1248468416851541",
       "display_format": "IMAGE",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/707589361748456.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1248468416851541.jpg"
       ]
     },
     {
-      "ad_archive_id": "1188577363130337",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=1188577363130337",
+      "ad_archive_id": "1029540745827840",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1029540745827840",
       "display_format": "IMAGE",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1188577363130337.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1029540745827840.jpg"
       ]
     },
     {
-      "ad_archive_id": "25020659087573167",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=25020659087573167",
+      "ad_archive_id": "1053227379983270",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1053227379983270",
       "display_format": "IMAGE",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/25020659087573167.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1053227379983270.jpg"
       ]
     },
     {
-      "ad_archive_id": "1139632468283788",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=1139632468283788",
+      "ad_archive_id": "664707696717463",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=664707696717463",
       "display_format": "IMAGE",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1139632468283788.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/664707696717463.jpg"
       ]
     },
     {
-      "ad_archive_id": "1366185381834891",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=1366185381834891",
+      "ad_archive_id": "2437750059943611",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=2437750059943611",
       "display_format": "IMAGE",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1366185381834891.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/2437750059943611.jpg"
       ]
     },
     {
-      "ad_archive_id": "833714346252327",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=833714346252327",
-      "display_format": "IMAGE",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "ad_archive_id": "880419213890272",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=880419213890272",
+      "display_format": "VIDEO",
+      "winner_score": 425,
+      "body_text": "Du suchst eine alltagstaugliche Lösung gegen Schmerzen und Verspannungen? 😩\n\nDu kannst dich nicht mal wirklich entspannen und das stundenlange Sitzen ist eine echte Folter. Die Verspannungen\nziehen si",
+      "start_date": "2024-12-06 08:00:00",
       "is_active": false,
-      "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/833714346252327.jpg"
-      ]
+      "local_image_paths": []
     },
     {
-      "ad_archive_id": "4073746346271027",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=4073746346271027",
-      "display_format": "IMAGE",
-      "winner_score": 196,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-23 07:00:00",
+      "ad_archive_id": "493996469810484",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=493996469810484",
+      "display_format": "VIDEO",
+      "winner_score": 405,
+      "body_text": ",,Die beste Faszienrolle überhaupt. Sehr angenehm durch die Beweglichkeit der einzelnen Holzelemente und trotzdem sehr effektiv, da der Druck individuell angepasst werden kann. Material ist absolut na",
+      "start_date": "2024-07-05 07:00:00",
       "is_active": false,
-      "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/4073746346271027.jpg"
-      ]
+      "local_image_paths": []
     },
     {
-      "ad_archive_id": "1352716069789222",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=1352716069789222",
-      "display_format": "IMAGE",
-      "winner_score": 196,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-23 07:00:00",
+      "ad_archive_id": "1038608994373544",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1038608994373544",
+      "display_format": "VIDEO",
+      "winner_score": 401,
+      "body_text": "Du suchst eine alltagstaugliche Lösung gegen Schmerzen und Verspannungen? 😩\n\nDu kannst dich nicht mal wirklich entspannen und das stundenlange Sitzen ist eine echte Folter. Die Verspannungen\nziehen si",
+      "start_date": "2025-05-06 07:00:00",
       "is_active": false,
-      "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1352716069789222.jpg"
-      ]
+      "local_image_paths": []
     },
     {
-      "ad_archive_id": "1521954465702119",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=1521954465702119",
-      "display_format": "IMAGE",
-      "winner_score": 163,
-      "body_text": "🖤 Black Week bei styleholz: bis zu 35% sparen und ein Geschenk zu jeder Bestellung über 100€\n\nJetzt ist der perfekte Zeitpunkt, um dir oder deinen Liebsten etwas Gutes zu tun:\n➡️ bis zu -20% auf alle ",
-      "start_date": "2025-11-25 08:00:00",
+      "ad_archive_id": "658656136898845",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=658656136898845",
+      "display_format": "VIDEO",
+      "winner_score": 397,
+      "body_text": "Du suchst eine alltagstaugliche Lösung gegen Schmerzen und Verspannungen? 😩\n\nDu kannst dich nicht mal wirklich entspannen und das stundenlange Sitzen ist eine echte Folter. Die Verspannungen\nziehen si",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
-      "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1521954465702119.jpg"
-      ]
+      "local_image_paths": []
     }
   ],
   "top_10_static_winners": [
     {
-      "ad_archive_id": "2212711662547645",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=2212711662547645",
-      "winner_score": 216,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-23 07:00:00",
+      "ad_archive_id": "673616238588633",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=673616238588633",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/2212711662547645.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/673616238588633.jpg"
       ]
     },
     {
-      "ad_archive_id": "707589361748456",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=707589361748456",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "ad_archive_id": "1248468416851541",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1248468416851541",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/707589361748456.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1248468416851541.jpg"
       ]
     },
     {
-      "ad_archive_id": "1188577363130337",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=1188577363130337",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "ad_archive_id": "1029540745827840",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1029540745827840",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1188577363130337.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1029540745827840.jpg"
       ]
     },
     {
-      "ad_archive_id": "25020659087573167",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=25020659087573167",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "ad_archive_id": "1053227379983270",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1053227379983270",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/25020659087573167.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1053227379983270.jpg"
       ]
     },
     {
-      "ad_archive_id": "1139632468283788",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=1139632468283788",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "ad_archive_id": "664707696717463",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=664707696717463",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1139632468283788.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/664707696717463.jpg"
       ]
     },
     {
-      "ad_archive_id": "1366185381834891",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=1366185381834891",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "ad_archive_id": "2437750059943611",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=2437750059943611",
+      "winner_score": 427,
+      "body_text": "Kennst du schon das 10-Minuten-Konzept für tägliche Entspannung und Schmerzlinderung?\n\nDie meisten Menschen suchen erst eine Lösung für ihre Verspannungen, wenn diese den Alltag einschränken. Doch war",
+      "start_date": "2025-04-30 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1366185381834891.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/2437750059943611.jpg"
       ]
     },
     {
-      "ad_archive_id": "833714346252327",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=833714346252327",
-      "winner_score": 197,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-22 07:00:00",
+      "ad_archive_id": "1105297564467149",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1105297564467149",
+      "winner_score": 395,
+      "body_text": "{{product.brand}}",
+      "start_date": "2024-11-30 08:00:00",
+      "is_active": false,
+      "local_image_paths": []
+    },
+    {
+      "ad_archive_id": "1829260551149450",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1829260551149450",
+      "winner_score": 395,
+      "body_text": "{{product.brand}}",
+      "start_date": "2025-02-22 08:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/833714346252327.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1829260551149450_0.jpg",
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1829260551149450_1.jpg",
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1829260551149450_2.jpg"
       ]
     },
     {
-      "ad_archive_id": "4073746346271027",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=4073746346271027",
-      "winner_score": 196,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-23 07:00:00",
+      "ad_archive_id": "637610582349096",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=637610582349096",
+      "winner_score": 395,
+      "body_text": "{{product.brand}}",
+      "start_date": "2025-03-20 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/4073746346271027.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/637610582349096_0.jpg",
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/637610582349096_1.jpg"
       ]
     },
     {
-      "ad_archive_id": "1352716069789222",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=1352716069789222",
-      "winner_score": 196,
-      "body_text": "Kennst du das? Stundenlanges Sitzen, verspannter Nacken, brummender Kopf… 😣\nDu wünschst dir einfach, wieder schmerzfrei durch den Alltag zu kommen.\n\nDie Faszienrolle? ❌\nZu hart, zu anstrengend, und da",
-      "start_date": "2025-10-23 07:00:00",
+      "ad_archive_id": "1007011744637108",
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1007011744637108",
+      "winner_score": 395,
+      "body_text": "{{product.brand}}",
+      "start_date": "2025-03-13 07:00:00",
       "is_active": false,
       "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1352716069789222.jpg"
-      ]
-    },
-    {
-      "ad_archive_id": "1521954465702119",
-      "ad_library_url": "https://www.facebook.com/ads/library/?id=1521954465702119",
-      "winner_score": 163,
-      "body_text": "🖤 Black Week bei styleholz: bis zu 35% sparen und ein Geschenk zu jeder Bestellung über 100€\n\nJetzt ist der perfekte Zeitpunkt, um dir oder deinen Liebsten etwas Gutes zu tun:\n➡️ bis zu -20% auf alle ",
-      "start_date": "2025-11-25 08:00:00",
-      "is_active": false,
-      "local_image_paths": [
-        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1521954465702119.jpg"
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1007011744637108_0.jpg",
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1007011744637108_1.jpg",
+        "/Users/johannes/Arbeit/Scalemaker/Kunden /styleholz/Creative Agent/creative generator/winners/assets/1007011744637108_2.jpg"
       ]
     }
   ],
-  "scraped_at": "2026-04-02T09:21:08.268092+00:00"
+  "scraped_at": "2026-04-02T10:03:03.468252+00:00"
 }
