@@ -572,17 +572,23 @@ IMPORTANT: This is a NEGATIVE/PROBLEM scene. Do NOT show the advertised product.
                     parts.append({"text": ref_desc + "\n\n"})
                     ref_count += 1
 
-        # Add engraving close-up reference for product statics
+        # Add engraving close-up reference — always for Woodstick products
         engraving_path = os.path.join(PROJECT_ROOT, "branding", "engraving_closeup.png")
+        creative_type = meta.get("creative_type", "product_static")
         if os.path.exists(engraving_path):
             eng_data, eng_mime = encode_image(engraving_path)
             if eng_data:
                 parts.append({"inline_data": {"mime_type": eng_mime, "data": eng_data}})
-                parts.append({
-                    "text": "ENGRAVING REFERENCE: This close-up shows the engraving on the RIGHT dark handle. It reads 'styleholz.' on top and 'wood a feeling' below — subtle, light brown text laser-engraved into the dark walnut wood. This engraving MUST be visible on the RIGHT handle of the product in your generated image. Match the font style, size, and placement exactly.\n\n"
-                })
+                if creative_type == "lifestyle":
+                    parts.append({
+                        "text": "ENGRAVING REFERENCE: The RIGHT dark handle has 'styleholz.' and 'wood a feeling' engraved. In this LIFESTYLE image, BOTH hands must grip the dark handles — covering the engraving area. If any part of a dark handle is visible without a hand, the engraving text must appear there.\n\n"
+                    })
+                else:
+                    parts.append({
+                        "text": "ENGRAVING REFERENCE: This close-up shows the engraving on the RIGHT dark handle. It reads 'styleholz.' on top and 'wood a feeling' below — subtle, light brown text laser-engraved into the dark walnut wood. This engraving MUST be clearly visible on the RIGHT handle in your generated image. Match the font style, size, and placement exactly.\n\n"
+                    })
                 ref_count += 1
-                print(f"  Added engraving reference")
+                print(f"  Added engraving reference ({creative_type})")
 
         if ref_count > 1:
             print(f"  Multi-reference: {ref_count} product images sent to Gemini")
