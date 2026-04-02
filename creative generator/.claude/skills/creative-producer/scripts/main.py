@@ -572,10 +572,13 @@ IMPORTANT: This is a NEGATIVE/PROBLEM scene. Do NOT show the advertised product.
                     parts.append({"text": ref_desc + "\n\n"})
                     ref_count += 1
 
-        # Add engraving close-up reference — always for Woodstick products
+        # Add engraving close-up reference — only when a Woodstick is visible
         engraving_path = os.path.join(PROJECT_ROOT, "branding", "engraving_closeup.png")
         creative_type = meta.get("creative_type", "product_static")
-        if os.path.exists(engraving_path):
+        product_cat = meta.get("product_category", "")
+        woodstick_categories = ["woodstick_flex", "woodstick_mini", "all_in_set", "starter_set", "leichte_beine_set", "reise_set", "duo_pack"]
+        has_woodstick = product_cat in woodstick_categories or "woodstick" in product_image_path or "faszienstab" in product_image_path
+        if os.path.exists(engraving_path) and has_woodstick:
             eng_data, eng_mime = encode_image(engraving_path)
             if eng_data:
                 parts.append({"inline_data": {"mime_type": eng_mime, "data": eng_data}})
