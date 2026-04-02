@@ -572,10 +572,22 @@ IMPORTANT: This is a NEGATIVE/PROBLEM scene. Do NOT show the advertised product.
                     parts.append({"text": ref_desc + "\n\n"})
                     ref_count += 1
 
+        # Add engraving close-up reference for product statics
+        engraving_path = os.path.join(PROJECT_ROOT, "branding", "engraving_closeup.png")
+        if os.path.exists(engraving_path):
+            eng_data, eng_mime = encode_image(engraving_path)
+            if eng_data:
+                parts.append({"inline_data": {"mime_type": eng_mime, "data": eng_data}})
+                parts.append({
+                    "text": "ENGRAVING REFERENCE: This close-up shows the engraving on the RIGHT dark handle. It reads 'styleholz.' on top and 'wood a feeling' below — subtle, light brown text laser-engraved into the dark walnut wood. This engraving MUST be visible on the RIGHT handle of the product in your generated image. Match the font style, size, and placement exactly.\n\n"
+                })
+                ref_count += 1
+                print(f"  Added engraving reference")
+
         if ref_count > 1:
             print(f"  Multi-reference: {ref_count} product images sent to Gemini")
         parts.append({
-            "text": f"YOU HAVE {ref_count} REFERENCE IMAGES ABOVE. The product in your generated image MUST match these references EXACTLY — same two-tone colors, same slim proportions, same grooved texture. Study all references carefully before generating.\n\n"
+            "text": f"YOU HAVE {ref_count} REFERENCE IMAGES ABOVE. The product in your generated image MUST match these references EXACTLY — same two-tone colors, same slim proportions, same grooved texture, and the engraving on the right handle. Study all references carefully before generating.\n\n"
         })
     elif is_negative_scene:
         parts.append({

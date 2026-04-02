@@ -31,7 +31,14 @@
         },
         "grooves": "Der Mittelteil besteht aus ca. 10-12 einzelnen gerillten Segmenten. Jedes Segment ist ein kurzes zylindrisches Stück mit umlaufenden Rillen/Kerben. Die Segmente sind NICHT glatt — sie haben eine deutliche Zahnrad-artige Textur.",
         "flex": "Der Stab ist BIEGSAM — er biegt sich leicht wenn man ihn auf den Körper drückt. Die Segmente haben minimal Spiel zwischen sich.",
-        "branding": "Kleine 'styleholz — wood a feeling' Gravur auf dem RECHTEN dunklen Griff. AI kann diese Gravur NICHT korrekt generieren. LÖSUNG: BEIDE Hände müssen IMMER die dunklen Griffe umschließen — dadurch verdecken die Hände die Stellen wo die Gravur sein sollte. Es darf KEIN nackter/leerer dunkler Griff ohne Hand sichtbar sein. Wenn der Stab gehalten wird: BEIDE Hände auf den Griffen, IMMER."
+        "branding": {
+          "text": "styleholz. / wood a feeling",
+          "position": "Auf dem RECHTEN dunklen Nussholz-Griff",
+          "style": "Dezente Laser-Gravierung, hellbraun auf dunkelbraun. 'styleholz.' oben, 'wood a feeling' darunter.",
+          "reference_image": "branding/engraving_closeup.png",
+          "rules_lifestyle": "Bei LIFESTYLE-Bildern (Person hält den Stab): BEIDE Hände müssen die dunklen Griffe umschließen — so wird verdeckt dass die AI die Gravierung nicht perfekt rendert.",
+          "rules_product_static": "Bei PRODUCT STATICS (Produkt ohne Person): Die Gravierung MUSS auf dem rechten Griff sichtbar sein. Das Gravur-Close-Up wird als Referenz mitgeschickt. Der Text 'styleholz.' und 'wood a feeling' muss lesbar auf dem rechten dunklen Griff erscheinen."
+        }
       },
 
       "size_references": {
