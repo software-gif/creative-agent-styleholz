@@ -384,6 +384,21 @@ SPELLING: All German text MUST be spelled correctly. Double-check every word. Co
     except Exception:
         pass
 
+    # Load Do's & Don'ts from brand.json (health claims etc.)
+    dos_donts_text = ""
+    try:
+        brand_path_dd = os.path.join(PROJECT_ROOT, "branding", "brand.json")
+        if os.path.exists(brand_path_dd):
+            with open(brand_path_dd) as ddf:
+                brand_dd = json.load(ddf)
+            donts = brand_dd.get("dos_and_donts", {}).get("donts", [])
+            if donts:
+                dos_donts_text = "\nHEALTH CLAIM RULES (MANDATORY — legal requirement):\n"
+                dos_donts_text += "\n".join(f"- {d}" for d in donts)
+                dos_donts_text += "\nUse ONLY: 'fördert', 'unterstützt', 'kann helfen', 'Wohlbefinden'. NEVER: 'heilt', 'beseitigt', 'therapiert', 'Schmerzfrei' (use 'Entspannung' instead).\n"
+    except Exception:
+        pass
+
     # Load Meta Creative Best Practices
     meta_bp_text = ""
     try:
@@ -408,7 +423,7 @@ SPELLING: All German text MUST be spelled correctly. Double-check every word. Co
     prompt_text = f"""Generate a professional static advertisement image with the following exact specifications.
 
 FORMAT: {meta['format']} aspect ratio, {meta['resolution']['width']}x{meta['resolution']['height']} pixels.
-{product_detail_text}{meta_bp_text}{variance_text}
+{product_detail_text}{dos_donts_text}{meta_bp_text}{variance_text}
 STYLE: {gen_instructions['style_reference']}
 
 BACKGROUND:
